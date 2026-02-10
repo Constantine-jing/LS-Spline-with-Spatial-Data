@@ -85,7 +85,7 @@ for (n in n_vec) {
   write.csv(err_tab, file = sprintf("marginal_out/sim1_curveerr_n%d.csv", n), row.names = FALSE)
   
   png(filename = sprintf("marginal_out/sim1_marginals_n%d.png", n), width = 1200, height = 900)
-  par(mfrow = c(2,2), mar = c(4,4,2,1))
+  par(mfrow = c(2,2))
   plot_marginals(curves, var_names = var_names, show_rmse = TRUE)
   dev.off()
   

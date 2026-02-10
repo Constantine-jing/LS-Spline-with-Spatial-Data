@@ -92,7 +92,7 @@ for (n in n_vec) {
   write.csv(err_tab, sprintf("marginal_out/sim2_curveerr_n%d.csv", n), row.names = FALSE)
   
   png(filename = sprintf("marginal_out/sim2_marginals_n%d.png", n), width = 1200, height = 900)
-  par(mfrow = c(2,2), mar = c(4,4,2,1))   # safer margins
+  par(mfrow = c(2,2))   # safer margins
   plot_marginals(curves, var_names = var_names, show_rmse = TRUE)
   dev.off()
   
