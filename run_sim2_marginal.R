@@ -52,35 +52,49 @@ simulate_sim2 <- function(n = 400, domain = c(0,1,0,1),
 }
 
 stopifnot(ls_tests())
-dat <- simulate_sim2(n=n, sigma2=sigma2, rho=rho, nu=nu, tau2=tau2, seed=seed)
-coords <- as.matrix(dat[, c("x","y_coord")])
-X_raw  <- as.matrix(dat[, paste0("X", 1:4)])
-y      <- dat$Y
 
-obj <- fit_ls_spatial(
-  y = y, X_raw = X_raw, coords = coords,
-  M_vec = rep(M, 4), nu = nu,
-  rho_init = rho,
-  lambda_init = tau2 / sigma2,
-  verbose = TRUE
-)
+# ---- add this near the top (replace n <- 400) ----
+n_vec <- c(100, 200, 400, 1000)
+
+stopifnot(ls_tests())
+dir.create("marginal_out", showWarnings = FALSE)
 
 truth_f_list <- default_truth_f_list()
 var_names <- paste0("X", 1:4)
 
-imp_tab <- importance_table(obj, var_names = var_names)
-obj$X_raw_for_marginal <- X_raw
-curves  <- marginal_curves(obj, x_grid = seq(0,1,length.out=101),
-                           truth_f_list = truth_f_list, clip = TRUE)
-err_tab <- curve_error_table(curves, var_names = var_names)
-
-dir.create("marginal_out", showWarnings = FALSE)
-write.csv(imp_tab, sprintf("marginal_out/sim2_importance_n%d.csv", n), row.names = FALSE)
-write.csv(err_tab, sprintf("marginal_out/sim2_curveerr_n%d.csv", n), row.names = FALSE)
-
-png(filename = sprintf("marginal_out/sim2_marginals_n%d.png", n), width = 1200, height = 900)
-par(mfrow = c(2,2))
-plot_marginals(curves, var_names = var_names, show_rmse = TRUE)
-dev.off()
-
-cat("Saved to marginal_out/ for Sim2, n=", n, "\n")
+for (n in n_vec) {
+  
+  dat <- simulate_sim2(n=n, sigma2=sigma2, rho=rho, nu=nu, tau2=tau2, seed=seed)
+  coords <- as.matrix(dat[, c("x","y_coord")])
+  X_raw  <- as.matrix(dat[, paste0("X", 1:4)])
+  y      <- dat$Y
+  
+  obj <- fit_ls_spatial(
+    y = y, X_raw = X_raw, coords = coords,
+    M_vec = rep(M, 4), nu = nu,
+    rho_init = rho,
+    lambda_init = tau2 / sigma2,
+    verbose = TRUE
+  )
+  
+  imp_tab <- importance_table(obj, var_names = var_names)
+  
+  # --- consistency key: needed for truth-centering in marginal_curves() ---
+  obj$X_raw_for_marginal <- X_raw
+  
+  curves  <- marginal_curves(
+    obj, x_grid = seq(0,1,length.out=101),
+    truth_f_list = truth_f_list, clip = TRUE
+  )
+  err_tab <- curve_error_table(curves, var_names = var_names)
+  
+  write.csv(imp_tab, sprintf("marginal_out/sim2_importance_n%d.csv", n), row.names = FALSE)
+  write.csv(err_tab, sprintf("marginal_out/sim2_curveerr_n%d.csv", n), row.names = FALSE)
+  
+  png(filename = sprintf("marginal_out/sim2_marginals_n%d.png", n), width = 1200, height = 900)
+  par(mfrow = c(2,2), mar = c(4,4,2,1))   # safer margins
+  plot_marginals(curves, var_names = var_names, show_rmse = TRUE)
+  dev.off()
+  
+  cat("Saved to marginal_out/ for Sim2, n=", n, "\n")
+}

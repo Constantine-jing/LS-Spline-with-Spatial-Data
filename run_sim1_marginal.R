@@ -3,8 +3,9 @@ source("spatial_utils.R")
 source("fit_spatial_reml.R")
 source("marginal_utils.R")
 
-# ---- choose n here ----
-n <- 400
+# ---- sample sizes ----
+n_vec <- c(100, 200, 400, 1000)
+
 M <- 6
 seed <- 42
 tau2 <- 0.15
@@ -45,44 +46,48 @@ simulate_sim1 <- function(n = 400, domain = c(0,1,0,1),
 }
 
 stopifnot(ls_tests())
-dat <- simulate_sim1(n = n, tau2 = tau2, seed = seed)
-coords <- as.matrix(dat[, c("x","y_coord")])
-X_raw  <- as.matrix(dat[, paste0("X", 1:4)])
-y      <- dat$Y
+dir.create("marginal_out", showWarnings = FALSE)
 
-# ---- Sim1 rho upper cap ----
-D <- pairdist(coords)
-rho_upper <- rho_upper_mult * max(D)
-
-obj <- fit_ls_spatial(
-  y = y, X_raw = X_raw, coords = coords,
-  M_vec = rep(M, 4), nu = nu,
-  rho_init = rho_init, lambda_init = lambda_init,
-  rho_upper = rho_upper,
-  verbose = TRUE
-)
-
-# ---- marginal outputs ----
 truth_f_list <- default_truth_f_list()
 var_names <- paste0("X", 1:4)
 
-imp_tab <- importance_table(obj, var_names = var_names)
-obj$X_raw_for_marginal <- X_raw
-curves  <- marginal_curves(obj, x_grid = seq(0,1,length.out=101),
-                           truth_f_list = truth_f_list, clip = TRUE)
-err_tab <- curve_error_table(curves, var_names = var_names)
-
-print(imp_tab)
-print(err_tab)
-
-# ---- save outputs ----
-dir.create("marginal_out", showWarnings = FALSE)
-write.csv(imp_tab, file = sprintf("marginal_out/sim1_importance_n%d.csv", n), row.names = FALSE)
-write.csv(err_tab, file = sprintf("marginal_out/sim1_curveerr_n%d.csv", n), row.names = FALSE)
-
-png(filename = sprintf("marginal_out/sim1_marginals_n%d.png", n), width = 1200, height = 900)
-par(mfrow = c(2,2))
-plot_marginals(curves, var_names = var_names, show_rmse = TRUE)
-dev.off()
-
-cat("Saved to marginal_out/ for Sim1, n=", n, "\n")
+for (n in n_vec) {
+  
+  dat <- simulate_sim1(n = n, tau2 = tau2, seed = seed)
+  coords <- as.matrix(dat[, c("x","y_coord")])
+  X_raw  <- as.matrix(dat[, paste0("X", 1:4)])
+  y      <- dat$Y
+  
+  # ---- Sim1 rho upper cap (MUST recompute for each n) ----
+  D <- pairdist(coords)
+  rho_upper <- rho_upper_mult * max(D)
+  
+  obj <- fit_ls_spatial(
+    y = y, X_raw = X_raw, coords = coords,
+    M_vec = rep(M, 4), nu = nu,
+    rho_init = rho_init, lambda_init = lambda_init,
+    rho_upper = rho_upper,
+    verbose = TRUE
+  )
+  
+  imp_tab <- importance_table(obj, var_names = var_names)
+  
+  # --- consistency key for truth-centering ---
+  obj$X_raw_for_marginal <- X_raw
+  
+  curves  <- marginal_curves(
+    obj, x_grid = seq(0,1,length.out=101),
+    truth_f_list = truth_f_list, clip = TRUE
+  )
+  err_tab <- curve_error_table(curves, var_names = var_names)
+  
+  write.csv(imp_tab, file = sprintf("marginal_out/sim1_importance_n%d.csv", n), row.names = FALSE)
+  write.csv(err_tab, file = sprintf("marginal_out/sim1_curveerr_n%d.csv", n), row.names = FALSE)
+  
+  png(filename = sprintf("marginal_out/sim1_marginals_n%d.png", n), width = 1200, height = 900)
+  par(mfrow = c(2,2), mar = c(4,4,2,1))
+  plot_marginals(curves, var_names = var_names, show_rmse = TRUE)
+  dev.off()
+  
+  cat("Saved to marginal_out/ for Sim1, n=", n, "\n")
+}
