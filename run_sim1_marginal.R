@@ -4,7 +4,7 @@ source("fit_spatial_reml.R")
 source("marginal_utils.R")
 
 # ---- sample sizes ----
-n_vec <- c(100, 200, 400, 1000)
+n_vec <- c(100, 200, 400, 1000, 10000)
 
 M <- 6
 seed <- 42

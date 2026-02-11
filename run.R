@@ -1,3 +1,3 @@
-source("sim1_sweep.R")
-source("sim2_sweep.R")
-source("sim3_sweep.R")
+source("run_sim1_marginal.R")
+source("run_sim2_marginal.R")
+source("run_sim3_marginal.R")

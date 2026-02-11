@@ -17,7 +17,7 @@ nu  <- 1.5
 tau2 <- 0.15
 
 # >>> put all sample sizes here <<<
-n_vec <- c(100, 200, 400, 1000)   # <-- edit this list
+n_vec <- c(100, 200, 400, 1000, 10000)   # <-- edit this list
 
 eta_truth_additive <- function(X, mu = 0) {
   X <- as.matrix(X); stopifnot(ncol(X) >= 4)

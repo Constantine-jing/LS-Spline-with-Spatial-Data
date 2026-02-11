@@ -54,7 +54,7 @@ simulate_sim2 <- function(n = 400, domain = c(0,1,0,1),
 stopifnot(ls_tests())
 
 # ---- add this near the top (replace n <- 400) ----
-n_vec <- c(100, 200, 400, 1000)
+n_vec <- c(100, 200, 400, 1000, 10000)
 
 stopifnot(ls_tests())
 dir.create("marginal_out", showWarnings = FALSE)
