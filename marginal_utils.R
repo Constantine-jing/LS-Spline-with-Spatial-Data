@@ -117,28 +117,65 @@ curve_error_table <- function(curves, var_names = NULL) {
   p <- length(curves$fhat_grid)
   if (is.null(var_names)) var_names <- paste0("X", 1:p)
   
+  rmse_vec <- numeric(p)
+  cor_vec  <- rep(NA_real_, p)
+  
+  for (j in 1:p) {
+    yhat  <- curves$fhat_grid[[j]]
+    ytrue <- curves$ftrue_grid[[j]]
+    rmse_vec[j] <- rmse(yhat, ytrue)
+    
+    # only compute correlation when both have variability
+    if (sd(yhat) > 0 && sd(ytrue) > 0) {
+      cor_vec[j] <- cor(yhat, ytrue)
+    } else {
+      cor_vec[j] <- NA_real_
+    }
+  }
+  
   data.frame(
     var = var_names,
-    rmse_curve = sapply(1:p, function(j) rmse(curves$fhat_grid[[j]], curves$ftrue_grid[[j]])),
-    cor_curve  = sapply(1:p, function(j) cor(curves$fhat_grid[[j]], curves$ftrue_grid[[j]]))
+    rmse_curve = rmse_vec,
+    cor_curve  = cor_vec
   )
 }
+
 
 # ------------------------------------------------------------
 # Plot marginal curves (one plot per covariate)
 # If truth exists: overlay true and estimated
 # base R plot (no ggplot)
 # ------------------------------------------------------------
-plot_marginals <- function(curves, var_names = NULL, show_rmse = TRUE) {
+plot_marginals <- function(curves, var_names = NULL, show_rmse = TRUE,
+                           ylim_shared = TRUE, ylim = NULL,
+                           symmetric = TRUE, pad = 0.05) {
   x <- curves$grid
   p <- length(curves$fhat_grid)
   if (is.null(var_names)) var_names <- paste0("X", 1:p)
   
+  # decide common ylim
+  if (is.null(ylim) && ylim_shared) {
+    all_y <- unlist(curves$fhat_grid)
+    if (!is.null(curves$ftrue_grid)) all_y <- c(all_y, unlist(curves$ftrue_grid))
+    rng <- range(all_y, finite = TRUE)
+    if (symmetric) {
+      a <- max(abs(rng))
+      rng <- c(-a, a)
+    }
+    # small padding
+    span <- diff(rng); if (span == 0) span <- 1
+    rng <- rng + c(-1, 1) * pad * span
+    ylim <- rng
+  }
+  
   for (j in 1:p) {
     yhat <- curves$fhat_grid[[j]]
+    
     plot(x, yhat, type = "l",
          main = paste0("Marginal: ", var_names[j]),
-         xlab = "x", ylab = "f_j(x)")
+         xlab = "x", ylab = "f_j(x)",
+         ylim = ylim)
+    
     abline(h = 0, lty = 3)
     
     if (!is.null(curves$ftrue_grid)) {
@@ -154,6 +191,7 @@ plot_marginals <- function(curves, var_names = NULL, show_rmse = TRUE) {
     }
   }
 }
+
 
 # ------------------------------------------------------------
 # Default truth functions for your current Sim1/2/3 setup (p=4)
