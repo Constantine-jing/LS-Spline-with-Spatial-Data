@@ -1,0 +1,88 @@
+=== run_boundary_exp1.R started ===
+Time: 2026-02-18 20:37:05 
+
+ls_tests() passed.
+
+============================================================
+EXPERIMENT 1: Matrix Boundary (p_real=5, M=6)
+============================================================
+
+n = 100 (max p_total=19, max p_garbage=14)
+  p_garbage= 1 (p_total=6, k=31, df=69) ... [OK] power=0.80 FPR=0.000  missed: X3  sigma2=0.756 tau2=0.172 (0.7s)
+  p_garbage= 5 (p_total=10, k=51, df=49) ... [OK] power=0.60 FPR=0.000  missed: X2,X3  sigma2=0.835 tau2=0.169 (0.3s)
+  p_garbage= 8 (p_total=13, k=66, df=34) ... [OK] power=0.60 FPR=0.000  missed: X3,X4  sigma2=0.213 tau2=0.201 (0.7s)
+  p_garbage=11 (p_total=16, k=81, df=19) ... [LOW_DF] power=0.40 FPR=0.000  missed: X3,X4,X5  sigma2=2.958 tau2=0.099 (0.4s)
+  p_garbage=13 (p_total=18, k=91, df=9) ... [LOW_DF] power=0.40 FPR=0.000  missed: X3,X4,X5  sigma2=73.895 tau2=0.219 (0.9s)
+  p_garbage=14 (p_total=19, k=96, df=4) ... [LOW_DF] power=0.00 FPR=0.000  missed: X1,X2,X3,X4,X5  sigma2=1.249 tau2=0.000 (1.0s)
+  p_garbage=15 (p_total=20, k=101, df=-1) ... [INFEASIBLE] (0.0s)
+
+n = 200 (max p_total=39, max p_garbage=34)
+  p_garbage= 7 (p_total=12, k=61, df=139) ... [OK] power=1.00 FPR=0.000  sigma2=0.667 tau2=0.199 (1.6s)
+  p_garbage=15 (p_total=20, k=101, df=99) ... [OK] power=1.00 FPR=0.133  sigma2=1.310 tau2=0.127 (1.6s)
+  p_garbage=22 (p_total=27, k=136, df=64) ... [OK] power=0.80 FPR=0.182  missed: X3  sigma2=0.772 tau2=0.077 (1.9s)
+  p_garbage=28 (p_total=33, k=166, df=34) ... [OK] power=0.60 FPR=0.000  missed: X3,X4  sigma2=0.423 tau2=0.127 (2.2s)
+  p_garbage=32 (p_total=37, k=186, df=14) ... [LOW_DF] power=0.80 FPR=0.000  missed: X5  sigma2=0.121 tau2=0.100 (1.9s)
+  p_garbage=34 (p_total=39, k=196, df=4) ... [LOW_DF] power=0.00 FPR=0.000  missed: X1,X2,X3,X4,X5  sigma2=20.835 tau2=0.000 (5.3s)
+  p_garbage=35 (p_total=40, k=201, df=-1) ... [INFEASIBLE] (0.0s)
+
+n = 400 (max p_total=79, max p_garbage=74)
+  p_garbage=19 (p_total=24, k=121, df=279) ... [OK] power=1.00 FPR=0.000  sigma2=2.010 tau2=0.163 (9.3s)
+  p_garbage=35 (p_total=40, k=201, df=199) ... [OK] power=1.00 FPR=0.114  sigma2=0.246 tau2=0.111 (8.9s)
+  p_garbage=50 (p_total=55, k=276, df=124) ... [OK] power=0.80 FPR=0.000  missed: X3  sigma2=0.783 tau2=0.206 (11.8s)
+  p_garbage=62 (p_total=67, k=336, df=64) ... [OK] power=0.80 FPR=0.000  missed: X3  sigma2=0.956 tau2=0.150 (11.8s)
+  p_garbage=70 (p_total=75, k=376, df=24) ... [OK] power=0.00 FPR=0.000  missed: X1,X2,X3,X4,X5  sigma2=2.000 tau2=0.233 (10.6s)
+  p_garbage=74 (p_total=79, k=396, df=4) ... [LOW_DF] power=0.00 FPR=0.000  missed: X1,X2,X3,X4,X5  sigma2=0.204 tau2=0.000 (32.5s)
+  p_garbage=75 (p_total=80, k=401, df=-1) ... [INFEASIBLE] (0.0s)
+
+
+Saved boundary_out/exp1_matrix_boundary.csv
+
+--- Full table ---
+   n p_real p_garbage p_total   k df_resid     status power   FPR n_missed
+ 100      5         1       6  31       69         OK   0.8 0.000        1
+ 100      5         5      10  51       49         OK   0.6 0.000        2
+ 100      5         8      13  66       34         OK   0.6 0.000        2
+ 100      5        11      16  81       19     LOW_DF   0.4 0.000        3
+ 100      5        13      18  91        9     LOW_DF   0.4 0.000        3
+ 100      5        14      19  96        4     LOW_DF   0.0 0.000        5
+ 100      5        15      20 101       -1 INFEASIBLE    NA    NA       NA
+ 200      5         7      12  61      139         OK   1.0 0.000        0
+ 200      5        15      20 101       99         OK   1.0 0.133        0
+ 200      5        22      27 136       64         OK   0.8 0.182        1
+ 200      5        28      33 166       34         OK   0.6 0.000        2
+ 200      5        32      37 186       14     LOW_DF   0.8 0.000        1
+ 200      5        34      39 196        4     LOW_DF   0.0 0.000        5
+ 200      5        35      40 201       -1 INFEASIBLE    NA    NA       NA
+ 400      5        19      24 121      279         OK   1.0 0.000        0
+ 400      5        35      40 201      199         OK   1.0 0.114        0
+ 400      5        50      55 276      124         OK   0.8 0.000        1
+ 400      5        62      67 336       64         OK   0.8 0.000        1
+ 400      5        70      75 376       24         OK   0.0 0.000        5
+ 400      5        74      79 396        4     LOW_DF   0.0 0.000        5
+ 400      5        75      80 401       -1 INFEASIBLE    NA    NA       NA
+ sigma2_hat tau2_hat
+      0.756 1.72e-01
+      0.835 1.69e-01
+      0.213 2.01e-01
+      2.958 9.94e-02
+     73.895 2.19e-01
+      1.249 2.97e-07
+         NA       NA
+      0.667 1.99e-01
+      1.310 1.27e-01
+      0.772 7.73e-02
+      0.423 1.27e-01
+      0.121 1.00e-01
+     20.835 6.05e-07
+         NA       NA
+      2.010 1.63e-01
+      0.246 1.11e-01
+      0.783 2.06e-01
+      0.956 1.50e-01
+      2.000 2.33e-01
+      0.204 6.25e-05
+         NA       NA
+
+
+=== run_boundary_exp1.R finished ===
+Time: 2026-02-18 20:38:48 

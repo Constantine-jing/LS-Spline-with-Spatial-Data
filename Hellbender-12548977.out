@@ -1,0 +1,143 @@
+=== run_boundary.R started ===
+Time: 2026-02-18 15:51:38 
+Node: c009.mgmt.hellbender 
+R version: R version 4.4.0 (2024-04-24) 
+
+ls_tests() passed.
+
+
+============================================================
+EXPERIMENT 1: Matrix Boundary
+============================================================
+
+  n=100 p_garbage=1 (k=31 df=69) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.2s)
+  n=100 p_garbage=5 (k=51 df=49) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.0s)
+  n=100 p_garbage=8 (k=66 df=34) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.0s)
+  n=100 p_garbage=11 (k=81 df=19) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.0s)
+  n=100 p_garbage=13 (k=91 df=9) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.0s)
+  n=100 p_garbage=14 (k=96 df=4) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.0s)
+  n=100 p_garbage=15 (k=101 df=-1) ... [INFEASIBLE] power=-1.00 FPR=-1.00 (0.0s)
+
+  n=200 p_garbage=7 (k=61 df=139) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.3s)
+  n=200 p_garbage=15 (k=101 df=99) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.3s)
+  n=200 p_garbage=22 (k=136 df=64) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.3s)
+  n=200 p_garbage=28 (k=166 df=34) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.3s)
+  n=200 p_garbage=32 (k=186 df=14) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.3s)
+  n=200 p_garbage=34 (k=196 df=4) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (0.3s)
+  n=200 p_garbage=35 (k=201 df=-1) ... [INFEASIBLE] power=-1.00 FPR=-1.00 (0.0s)
+
+  n=400 p_garbage=19 (k=121 df=279) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (1.8s)
+  n=400 p_garbage=35 (k=201 df=199) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (1.8s)
+  n=400 p_garbage=50 (k=276 df=124) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (1.8s)
+  n=400 p_garbage=62 (k=336 df=64) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (1.8s)
+  n=400 p_garbage=70 (k=376 df=24) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (1.8s)
+  n=400 p_garbage=74 (k=396 df=4) ... [SIM_FAIL] power=-1.00 FPR=-1.00 (1.8s)
+  n=400 p_garbage=75 (k=401 df=-1) ... [INFEASIBLE] power=-1.00 FPR=-1.00 (0.0s)
+
+Saved boundary_out/exp1_matrix_boundary.csv
+
+   n p_garbage p_total   k df_resid     status power FPR sigma2_hat tau2_hat
+ 100         1       6  31       69   SIM_FAIL    NA  NA         NA       NA
+ 100         5      10  51       49   SIM_FAIL    NA  NA         NA       NA
+ 100         8      13  66       34   SIM_FAIL    NA  NA         NA       NA
+ 100        11      16  81       19   SIM_FAIL    NA  NA         NA       NA
+ 100        13      18  91        9   SIM_FAIL    NA  NA         NA       NA
+ 100        14      19  96        4   SIM_FAIL    NA  NA         NA       NA
+ 100        15      20 101       -1 INFEASIBLE    NA  NA         NA       NA
+ 200         7      12  61      139   SIM_FAIL    NA  NA         NA       NA
+ 200        15      20 101       99   SIM_FAIL    NA  NA         NA       NA
+ 200        22      27 136       64   SIM_FAIL    NA  NA         NA       NA
+ 200        28      33 166       34   SIM_FAIL    NA  NA         NA       NA
+ 200        32      37 186       14   SIM_FAIL    NA  NA         NA       NA
+ 200        34      39 196        4   SIM_FAIL    NA  NA         NA       NA
+ 200        35      40 201       -1 INFEASIBLE    NA  NA         NA       NA
+ 400        19      24 121      279   SIM_FAIL    NA  NA         NA       NA
+ 400        35      40 201      199   SIM_FAIL    NA  NA         NA       NA
+ 400        50      55 276      124   SIM_FAIL    NA  NA         NA       NA
+ 400        62      67 336       64   SIM_FAIL    NA  NA         NA       NA
+ 400        70      75 376       24   SIM_FAIL    NA  NA         NA       NA
+ 400        74      79 396        4   SIM_FAIL    NA  NA         NA       NA
+ 400        75      80 401       -1 INFEASIBLE    NA  NA         NA       NA
+
+
+============================================================
+EXPERIMENT 2: Statistical Boundary (garbage sweep)
+============================================================
+
+n=1000 (max feasible p_garbage=189)
+  p_garbage= 10 (k=101 df=899) ... [OK] power=0.70 FPR=0.000 (99.9s)  missed: X5,X8,X10
+  p_garbage= 20 (k=151 df=849) ... [OK] power=0.80 FPR=0.000 (98.2s)  missed: X5,X10
+  p_garbage= 40 (k=251 df=749) ... [OK] power=0.80 FPR=0.000 (104.0s)  missed: X5,X10
+  p_garbage= 60 (k=351 df=649) ... [OK] power=0.80 FPR=0.000 (124.6s)  missed: X8,X10
+  p_garbage= 80 (k=451 df=549) ... [OK] power=0.80 FPR=0.000 (131.9s)  missed: X5,X10
+  p_garbage=100 (k=551 df=449) ... [OK] power=0.70 FPR=0.000 (146.6s)  missed: X5,X8,X10
+  p_garbage=130 (k=701 df=299) ... [OK] power=0.80 FPR=0.000 (161.1s)  missed: X5,X10
+  p_garbage=160 (k=851 df=149) ... [OK] power=0.60 FPR=0.006 (190.9s)  missed: X3,X5,X8,X10
+
+n=2000 (max feasible p_garbage=389)
+  p_garbage= 10 (k=101 df=1899) ... [OK] power=0.80 FPR=0.000 (697.1s)  missed: X5,X10
+  p_garbage= 20 (k=151 df=1849) ... [OK] power=0.80 FPR=0.000 (667.8s)  missed: X5,X10
+  p_garbage= 40 (k=251 df=1749) ... [OK] power=0.90 FPR=0.000 (639.6s)  missed: X5
+  p_garbage= 60 (k=351 df=1649) ... [OK] power=0.80 FPR=0.000 (707.4s)  missed: X5,X10
+  p_garbage= 80 (k=451 df=1549) ... [OK] power=0.80 FPR=0.013 (782.9s)  missed: X5,X10
+  p_garbage=100 (k=551 df=1449) ... [OK] power=0.80 FPR=0.010 (794.6s)  missed: X5,X10
+  p_garbage=130 (k=701 df=1299) ... [OK] power=0.80 FPR=0.008 (882.4s)  missed: X5,X10
+  p_garbage=160 (k=851 df=1149) ... [OK] power=0.80 FPR=0.000 (871.5s)  missed: X5,X10
+
+Saved boundary_out/exp2_stat_boundary.csv
+
+    n p_garbage p_total df_resid power     FPR n_missed       missed
+ 1000        10      20      899   0.7 0.00000        3    X5,X8,X10
+ 1000        20      30      849   0.8 0.00000        2       X5,X10
+ 1000        40      50      749   0.8 0.00000        2       X5,X10
+ 1000        60      70      649   0.8 0.00000        2       X8,X10
+ 1000        80      90      549   0.8 0.00000        2       X5,X10
+ 1000       100     110      449   0.7 0.00000        3    X5,X8,X10
+ 1000       130     140      299   0.8 0.00000        2       X5,X10
+ 1000       160     170      149   0.6 0.00625        4 X3,X5,X8,X10
+ 2000        10      20     1899   0.8 0.00000        2       X5,X10
+ 2000        20      30     1849   0.8 0.00000        2       X5,X10
+ 2000        40      50     1749   0.9 0.00000        1           X5
+ 2000        60      70     1649   0.8 0.00000        2       X5,X10
+ 2000        80      90     1549   0.8 0.01250        2       X5,X10
+ 2000       100     110     1449   0.8 0.01000        2       X5,X10
+ 2000       130     140     1299   0.8 0.00769        2       X5,X10
+ 2000       160     170     1149   0.8 0.00000        2       X5,X10
+
+
+============================================================
+EXPERIMENT 3: Signal Strength Boundary
+============================================================
+
+--- STRONG signals (n=1000) ---
+  p_garbage= 10 (k=101 df=899) ... [OK] power=0.70 FPR=0.000 (97.9s)  missed: X5,X8,X10
+  p_garbage= 20 (k=151 df=849) ... [OK] power=0.80 FPR=0.000 (97.2s)  missed: X5,X10
+  p_garbage= 40 (k=251 df=749) ... [OK] power=0.80 FPR=0.000 (100.9s)  missed: X5,X10
+  p_garbage= 60 (k=351 df=649) ... [OK] power=0.80 FPR=0.000 (131.8s)  missed: X8,X10
+  p_garbage= 80 (k=451 df=549) ... [OK] power=0.80 FPR=0.000 (131.5s)  missed: X5,X10
+  p_garbage=100 (k=551 df=449) ... [OK] power=0.70 FPR=0.000 (145.5s)  missed: X5,X8,X10
+  p_garbage=130 (k=701 df=299) ... [OK] power=0.80 FPR=0.000 (160.4s)  missed: X5,X10
+
+--- WEAK signals (n=1000) ---
+  p_garbage= 10 (k=101 df=899) ... [OK] power=0.60 FPR=0.000 (98.4s)  missed: X3,X5,X8,X10
+  p_garbage= 20 (k=151 df=849) ... [OK] power=0.60 FPR=0.000 (97.6s)  missed: X3,X5,X8,X10
+  p_garbage= 40 (k=251 df=749) ... [OK] power=0.50 FPR=0.000 (105.1s)  missed: X3,X4,X5,X8,X10
+  p_garbage= 60 (k=351 df=649) ... [OK] power=0.60 FPR=0.000 (131.9s)  missed: X3,X6,X8,X10
+  p_garbage= 80 (k=451 df=549) ... [OK] power=0.50 FPR=0.000 (131.4s)  missed: X3,X5,X6,X8,X10
+  p_garbage=100 (k=551 df=449) ... [OK] power=0.50 FPR=0.000 (136.8s)  missed: X3,X4,X5,X8,X10
+  p_garbage=130 (k=701 df=299) ... [OK] power=0.20 FPR=0.000 (157.0s)  missed: X1,X2,X3,X4,X5,X6,X8,X10
+
+Saved boundary_out/exp3_signal_boundary.csv
+
+--- Strong vs Weak comparison ---
+  p_garbage= 10:  strong power=0.70 FPR=0.000  |  weak power=0.60 FPR=0.000
+  p_garbage= 20:  strong power=0.80 FPR=0.000  |  weak power=0.60 FPR=0.000
+  p_garbage= 40:  strong power=0.80 FPR=0.000  |  weak power=0.50 FPR=0.000
+  p_garbage= 60:  strong power=0.80 FPR=0.000  |  weak power=0.60 FPR=0.000
+  p_garbage= 80:  strong power=0.80 FPR=0.000  |  weak power=0.50 FPR=0.000
+  p_garbage=100:  strong power=0.70 FPR=0.000  |  weak power=0.50 FPR=0.000
+  p_garbage=130:  strong power=0.80 FPR=0.000  |  weak power=0.20 FPR=0.000
+
+
+=== run_boundary.R finished ===
+Time: 2026-02-18 18:18:56 

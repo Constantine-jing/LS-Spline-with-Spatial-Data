@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=bound_exp1
+#SBATCH --ntasks=1
+#SBATCH --mem=16G
+#SBATCH --time=0-01:00:00
+#SBATCH --mail-user=mjd4d@umsystem.edu
+#SBATCH --mail-type=FAIL,END
+#SBATCH --partition=general
+#SBATCH --out=Hellbender-%j.out
+
+module load r/4.4.0
+
+cd ~/LS_spline
+
+Rscript run_boundary_exp1.R
