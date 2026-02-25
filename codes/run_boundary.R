@@ -4,7 +4,7 @@
 # Main runner for boundary experiments on Hellbender.
 # Sources all dependencies and runs the three experiments.
 #
-# Usage:  Rscript run_boundary.R
+# Exp 1 (failed — SIM_FAIL), Exp 2 passed, Exp 3 passed
 #
 # Output goes to boundary_out/ directory:
 #   - exp1_matrix_boundary.csv

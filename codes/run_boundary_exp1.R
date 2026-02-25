@@ -1,5 +1,6 @@
 # ============================================================
 # run_boundary_exp1.R
+# is the Hellbender version
 #
 # EXPERIMENT 1 ONLY: Matrix Boundary
 # Fixed: uses a 5-covariate truth function (not 10)

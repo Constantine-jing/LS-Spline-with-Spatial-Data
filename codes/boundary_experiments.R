@@ -1,6 +1,8 @@
 # ============================================================
 # boundary_experiments.R
 #
+# is the local/interactive version
+# 
 # Three boundary experiments for variable selection in the
 # LS-spline + spatial GP additive model.
 #
