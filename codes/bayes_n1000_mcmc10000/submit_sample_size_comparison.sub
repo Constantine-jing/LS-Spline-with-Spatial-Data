@@ -2,7 +2,7 @@
 #SBATCH --job-name=sample_size_compar
 #SBATCH --ntasks=1
 #SBATCH --mem=64G
-#SBATCH --time=0-12:00:00
+#SBATCH --time=0-48:00:00
 #SBATCH --mail-user=mjd4d@umsystem.edu
 #SBATCH --mail-type=FAIL,END
 #SBATCH --partition=general
