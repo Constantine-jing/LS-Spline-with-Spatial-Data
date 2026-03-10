@@ -239,9 +239,9 @@ for (bname in names(bundles)) {
     a_smooth         = bndl$a_smooth,  b_smooth = bndl$b_smooth,
     log_rho_mu       = bndl$log_rho_mu,
     log_rho_sd       = bndl$log_rho_sd,
-    mh_sd_log_sigma2 = 0.3,
+    mh_sd_log_sigma2 = 0.5,
     mh_sd_log_tau2   = 0.3,
-    mh_sd_log_rho    = 0.2,
+    mh_sd_log_rho    = 0.3,
     init    = base_init,
     verbose = TRUE
   )
