@@ -1,0 +1,78 @@
+
+####################################################
+# REML vs Full Bayes: Sim2
+####################################################
+
+Running REML (M=6)...
+
+Running Full Bayes (M=20)...
+  iter 1000/6000  rho=0.1407  sigma2=0.4391  tau2=0.1706  tau2_s=0.005,0.001,0.001,0.004
+  iter 2000/6000  rho=0.2172  sigma2=0.5946  tau2=0.1602  tau2_s=0.014,0.002,0.002,0.007
+  iter 3000/6000  rho=0.2805  sigma2=1.1914  tau2=0.1419  tau2_s=0.004,0.003,0.001,0.009
+  iter 4000/6000  rho=0.1548  sigma2=0.3537  tau2=0.1628  tau2_s=0.013,0.003,0.002,0.006
+  iter 5000/6000  rho=0.1656  sigma2=0.5416  tau2=0.1447  tau2_s=0.008,0.003,0.003,0.005
+  iter 6000/6000  rho=0.1431  sigma2=0.3825  tau2=0.1566  tau2_s=0.005,0.002,0.002,0.005
+  MH acceptance: sigma2=0.677  tau2=0.302  rho=0.622
+
+####################################################
+# REML vs Full Bayes: Sim3
+####################################################
+
+Running REML (M=6)...
+
+Running Full Bayes (M=20)...
+  iter 1000/6000  rho=0.1763  sigma2=0.6940  tau2=0.1449  tau2_s=0.004,0.001,0.003,0.025
+  iter 2000/6000  rho=0.1013  sigma2=0.1489  tau2=0.1545  tau2_s=0.012,0.003,0.002,0.004
+  iter 3000/6000  rho=0.1405  sigma2=0.2285  tau2=0.1242  tau2_s=0.006,0.004,0.004,0.005
+  iter 4000/6000  rho=0.0860  sigma2=0.1308  tau2=0.1458  tau2_s=0.008,0.002,0.002,0.005
+  iter 5000/6000  rho=0.1147  sigma2=0.2020  tau2=0.1426  tau2_s=0.003,0.003,0.005,0.007
+  iter 6000/6000  rho=0.0973  sigma2=0.1781  tau2=0.1543  tau2_s=0.009,0.014,0.001,0.015
+  MH acceptance: sigma2=0.636  tau2=0.310  rho=0.642
+
+
+####################################################
+# REML vs Full Bayes: Comparison
+####################################################
+
+--- Sim2: Curve RMSE ---
+                X1        X2        X3        X4
+REML        0.1897    0.0539    0.0771    0.0241
+Bayes       0.0421    0.0374    0.0561    0.0309
+
+--- Sim2: Bayes coverage ---
+  var rmse_curve band_coverage
+1  X1    0.04213             1
+2  X2    0.03741             1
+3  X3    0.05612             1
+4  X4    0.03089             1
+
+--- Sim2: Variance estimates ---
+  REML:  sigma2=0.9909  tau2=0.1651  rho=0.2670
+  Bayes: sigma2=0.6749  tau2=0.1631  rho=0.2184
+  True:  sigma2=0.8000  tau2=0.1500  rho=0.2000
+
+--- Sim2: Time ---
+  REML: 3.1s  Bayes: 1044.7s
+
+
+--- Sim3: Curve RMSE ---
+                X1        X2        X3        X4
+REML        0.2500    0.0897    0.0735    0.0606
+Bayes       0.0816    0.0756    0.0671    0.0622
+
+--- Sim3: Bayes coverage ---
+  var rmse_curve band_coverage
+1  X1    0.08155        0.9406
+2  X2    0.07559        0.9604
+3  X3    0.06712        1.0000
+4  X4    0.06222        1.0000
+
+--- Sim3: Variance estimates ---
+  REML:  sigma2=0.2310  tau2=0.1476  rho=0.1254
+  Bayes: sigma2=0.3043  tau2=0.1452  rho=0.1438
+  True:  sigma2=0.8000  tau2=0.1500  rho=0.2000
+
+--- Sim3: Time ---
+  REML: 3.7s  Bayes: 1041.0s
+
+Saved to bayes_out/reml_vs_bayes.csv
