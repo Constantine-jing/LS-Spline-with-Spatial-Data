@@ -1,0 +1,87 @@
+
+=== Sim1: n=1000, p=4 (iid X, NO spatial b) ===
+  Y range: [0.360, 5.450]  mean=3.087
+
+####################################################
+# REML: M=6
+####################################################
+REML status: 0 
+rho_hat    = 0.4481541 
+lambda_hat = 36.19041 
+sigma2_hat = 0.003985504 
+tau2_hat   = 0.144237 
+  REML done in 40.5s
+  sigma2=0.0040  tau2=0.1442  rho=0.4482
+  [Sim1 check] sigma2 should be near 0 -- no b in Y
+  REML curve RMSE:
+  var    rmse
+1  X1 0.23223
+2  X2 0.02377
+3  X3 0.04941
+4  X4 0.03241
+null device 
+          1 
+  Plot: bayes_out/sim1_n1000_reml_marginals.pdf
+
+####################################################
+# Full Bayes: M=20  n_iter=10000  n_burn=2500
+# MH sd: sigma2=0.5  tau2=0.3  rho=0.3
+####################################################
+  H: 1000 x 77
+  Init: rho=0.4482  sigma2=0.0100  tau2=0.1442
+  iter 1000/10000  rho=2.1306  sigma2=0.1815  tau2=0.1422  tau2_s=0.009,0.002,0.001,0.004
+  iter 2000/10000  rho=1.8901  sigma2=0.3844  tau2=0.1361  tau2_s=0.020,0.001,0.003,0.004
+  iter 3000/10000  rho=1.3036  sigma2=0.3002  tau2=0.1460  tau2_s=0.005,0.004,0.002,0.004
+  iter 4000/10000  rho=2.1029  sigma2=0.2434  tau2=0.1433  tau2_s=0.009,0.002,0.002,0.005
+  iter 5000/10000  rho=1.2203  sigma2=0.2050  tau2=0.1399  tau2_s=0.007,0.002,0.001,0.006
+  iter 6000/10000  rho=2.2314  sigma2=0.2555  tau2=0.1462  tau2_s=0.015,0.003,0.003,0.003
+  iter 7000/10000  rho=1.5093  sigma2=0.1736  tau2=0.1404  tau2_s=0.008,0.002,0.001,0.005
+  iter 8000/10000  rho=1.5026  sigma2=0.2652  tau2=0.1499  tau2_s=0.010,0.003,0.004,0.002
+  iter 9000/10000  rho=2.3384  sigma2=0.3999  tau2=0.1377  tau2_s=0.010,0.002,0.005,0.003
+  iter 10000/10000  rho=1.5073  sigma2=0.1429  tau2=0.1404  tau2_s=0.005,0.003,0.004,0.004
+  MH acceptance: sigma2=0.655  tau2=0.183  rho=0.762
+  Full Bayes done in 23773.6s
+  sigma2: mean=0.2817  95%CI=[0.1043,0.7060]  [should be small]
+  tau2:   mean=0.1424  95%CI=[0.1297,0.1549]  true=0.15
+  rho:    mean=1.8152  95%CI=[0.6682,4.2217]
+  MH accept: sigma2=0.655  tau2=0.183  rho=0.762
+  tau2_s:
+     X1      X2      X3      X4 
+0.01216 0.00209 0.00228 0.00504 
+  b post mean: mean=0.0432  sd=0.0375  [should be near 0]
+  Curve metrics:
+  var rmse_curve band_coverage
+1  X1    0.06593        0.7228
+2  X2    0.02990        1.0000
+3  X3    0.05152        0.8218
+4  X4    0.03724        0.9802
+null device 
+          1 
+  Plot: bayes_out/sim1_n1000_bayes_marginals.pdf
+null device 
+          1 
+  Plot: bayes_out/sim1_n1000_bayes_trace.pdf
+
+
+####################################################
+# REML vs Bayes: Sim1 n=1000
+####################################################
+
+--- Curve RMSE ---
+                  X1        X2        X3        X4
+REML         0.23223   0.02377   0.04941   0.03241
+Bayes        0.06593   0.02990   0.05152   0.03724
+
+--- Variance estimates ---
+  REML:  sigma2=0.0040  tau2=0.1442  rho=0.4482
+  Bayes: sigma2=0.2817  tau2=0.1424  rho=1.8152
+  True:  sigma2=0 (no b)  tau2=0.1500
+
+--- Timing: REML=40.5s  Bayes=23773.6s ---
+
+Outputs in bayes_out/:
+  sim1_n1000_reml_marginals.pdf
+  sim1_n1000_bayes_marginals.pdf
+  sim1_n1000_bayes_trace.pdf
+  sim1_n1000_reml_vs_bayes.csv
+  sim1_n1000_bayes_coverage.csv

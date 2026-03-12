@@ -1,0 +1,93 @@
+
+=== Sim3: n=1000, p=4 (spatially correlated X, WITH spatial b) ===
+    rho_X=0.10  nu_X=1.0  -- spatial confounding
+  Y range: [1.047, 6.331]  mean=3.585
+  b range: [-1.339, 1.866]  sd=0.720
+
+####################################################
+# REML: M=6
+####################################################
+REML status: 0 
+rho_hat    = 0.1945044 
+lambda_hat = 0.1650463 
+sigma2_hat = 0.8757379 
+tau2_hat   = 0.1445373 
+  REML done in 26.5s
+  sigma2=0.8757  tau2=0.1445  rho=0.1945  (true: 0.80 / 0.15 / 0.20)
+  REML curve RMSE:
+  var    rmse
+1  X1 0.26590
+2  X2 0.05269
+3  X3 0.03854
+4  X4 0.02248
+  [Sim3 check] X1 RMSE should be higher than Sim2 due to confounding
+null device 
+          1 
+  Plot: bayes_out/sim3_n1000_reml_marginals.pdf
+
+####################################################
+# Full Bayes: M=20  n_iter=10000  n_burn=2500
+# MH sd: sigma2=0.5  tau2=0.3  rho=0.3
+####################################################
+  H: 1000 x 77
+  Init: rho=0.1945  sigma2=0.8757  tau2=0.1445
+  iter 1000/10000  rho=0.2257  sigma2=1.3444  tau2=0.1448  tau2_s=0.008,0.005,0.002,0.010
+  iter 2000/10000  rho=0.1927  sigma2=0.7273  tau2=0.1463  tau2_s=0.009,0.003,0.005,0.003
+  iter 3000/10000  rho=0.1468  sigma2=0.4432  tau2=0.1445  tau2_s=0.009,0.002,0.002,0.009
+  iter 4000/10000  rho=0.1893  sigma2=0.9097  tau2=0.1365  tau2_s=0.008,0.002,0.002,0.004
+  iter 5000/10000  rho=0.1643  sigma2=0.6689  tau2=0.1447  tau2_s=0.007,0.004,0.001,0.004
+  iter 6000/10000  rho=0.1631  sigma2=0.7565  tau2=0.1489  tau2_s=0.005,0.002,0.002,0.008
+  iter 7000/10000  rho=0.2094  sigma2=0.9426  tau2=0.1500  tau2_s=0.003,0.002,0.002,0.007
+  iter 8000/10000  rho=0.1470  sigma2=0.6027  tau2=0.1559  tau2_s=0.006,0.003,0.001,0.008
+  iter 9000/10000  rho=0.1535  sigma2=0.4312  tau2=0.1488  tau2_s=0.006,0.003,0.002,0.005
+  iter 10000/10000  rho=0.1588  sigma2=0.4295  tau2=0.1526  tau2_s=0.005,0.002,0.001,0.016
+  MH acceptance: sigma2=0.403  tau2=0.196  rho=0.350
+  Full Bayes done in 21422.1s
+  sigma2: mean=0.7015  95%CI=[0.3600,1.4576]  true=0.80
+  tau2:   mean=0.1439  95%CI=[0.1317,0.1583]  true=0.15
+  rho:    mean=0.1712  95%CI=[0.1207,0.2445]  true=0.20
+  MH accept: sigma2=0.403  tau2=0.196  rho=0.350
+  tau2_s:
+     X1      X2      X3      X4 
+0.00649 0.00222 0.00219 0.00661 
+  b: cor(b_true, b_post)=0.9872  RMSE=0.1160
+  Curve metrics:
+  var rmse_curve band_coverage
+1  X1    0.07519        0.7129
+2  X2    0.04208        1.0000
+3  X3    0.03035        1.0000
+4  X4    0.02539        1.0000
+  [Sim3 check] Bayes X1 RMSE should be lower than REML X1 RMSE
+null device 
+          1 
+  Plot: bayes_out/sim3_n1000_bayes_marginals.pdf
+null device 
+          1 
+  Plot: bayes_out/sim3_n1000_bayes_trace.pdf
+
+
+####################################################
+# REML vs Bayes: Sim3 n=1000
+####################################################
+
+--- Curve RMSE ---
+                  X1        X2        X3        X4
+REML         0.26590   0.05269   0.03854   0.02248
+Bayes        0.07519   0.04208   0.03035   0.02539
+
+--- Variance estimates ---
+  REML:  sigma2=0.8757  tau2=0.1445  rho=0.1945
+  Bayes: sigma2=0.7015  tau2=0.1439  rho=0.1712
+  True:  sigma2=0.8000  tau2=0.1500  rho=0.2000
+
+--- b recovery ---
+  cor(b_true, b_post)=0.9872  RMSE=0.1160
+
+--- Timing: REML=26.5s  Bayes=21422.1s ---
+
+Outputs in bayes_out/:
+  sim3_n1000_reml_marginals.pdf
+  sim3_n1000_bayes_marginals.pdf
+  sim3_n1000_bayes_trace.pdf
+  sim3_n1000_reml_vs_bayes.csv
+  sim3_n1000_bayes_coverage.csv
