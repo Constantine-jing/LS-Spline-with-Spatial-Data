@@ -206,8 +206,10 @@ cat(sprintf("  Unique locations: %d (of %d obs)\n", n_unique, n))
 build_block_prior_precision_extended <- function(col_map, tau2_s, kappa2 = 1e6,
                                                   eps_ridge = 1e-6,
                                                   n_linear = 0) {
+  # col_map here is ALREADY shifted (indices account for linear cols).
+  # p_total = 1 (intercept) + n_linear + n_spline_cols
   p_covs   <- length(col_map)
-  p_total  <- 1 + n_linear + max(unlist(col_map))
+  p_total  <- 1 + max(unlist(col_map))
   Q0       <- matrix(0, p_total, p_total)
   
   # Intercept
@@ -221,8 +223,9 @@ build_block_prior_precision_extended <- function(col_map, tau2_s, kappa2 = 1e6,
   }
   
   # Spline blocks: RW2 penalty
+  # col_map already has the right indices (shifted), so just +1 for intercept
   for (j in 1:p_covs) {
-    idx <- 1 + n_linear + col_map[[j]]   # shift by n_linear
+    idx <- 1 + col_map[[j]]
     d_j <- length(idx)
     K_j <- build_rw2_penalty(d_j)
     Q0[idx, idx] <- Q0[idx, idx] + (1 / tau2_s[j]) * K_j + eps_ridge * diag(d_j)
@@ -295,26 +298,7 @@ cat(sprintf("  Intercept (mu): %.4f\n", beta_reml[1]))
 x_grid <- seq(0, 1, length.out = 101)
 reml_curves <- marginal_curves(reml_obj, x_grid = x_grid,
                                 truth_f_list = NULL, clip = TRUE)
-
-pdf("munich_rent/munich_reml_marginals.pdf", width = 10, height = 5)
-par(mfrow = c(1, 2))
-for (j in 1:p_smooth) {
-  # Map x_grid back to original scale for plotting
-  if (j == 1) {
-    x_orig <- x_grid * (area_max - area_min) + area_min
-    xlab <- "Floor space (m^2)"
-  } else {
-    x_orig <- x_grid * (yearc_max - yearc_min) + yearc_min
-    xlab <- "Year of construction"
-  }
-  plot(x_orig, reml_curves$fhat_grid[[j]], type = "l", lwd = 2,
-       main = paste0("REML: f(", smooth_names[j], ")"),
-       xlab = xlab, ylab = paste0("f_", j, "(x)"),
-       col = "blue")
-  abline(h = 0, lty = 3, col = "gray50")
-}
-dev.off()
-cat("  Plot: munich_rent/munich_reml_marginals.pdf\n")
+# NOTE: REML marginal plot deferred until after Bayes so we can share y-axes.
 
 
 # ============================================================
@@ -430,13 +414,31 @@ gs_for_plot$eta_samples <- cbind(
   gs$eta_samples[, (1 + p_linear + 1):ncol(gs$eta_samples), drop = FALSE]  # spline
 )
 
-pdf("munich_rent/munich_bayes_marginals.pdf", width = 10, height = 5)
-par(mfrow = c(1, 2))
+# Pre-compute Bayes bands for shared ylim
+bayes_bands <- vector("list", p_smooth)
 for (j in 1:p_smooth) {
-  # Compute marginal band manually
-  band <- gibbs_marginal_band(gs_for_plot, obj_bayes, j, x_grid,
-                               X_raw = X_smooth, truth_f = NULL, level = 0.95)
-  
+  bayes_bands[[j]] <- gibbs_marginal_band(gs_for_plot, obj_bayes, j, x_grid,
+                                           X_raw = X_smooth, truth_f = NULL, level = 0.95)
+}
+
+# Compute shared y-axis PER COVARIATE (across REML curve + Bayes band)
+shared_ylim <- vector("list", p_smooth)
+for (j in 1:p_smooth) {
+  all_y <- c(reml_curves$fhat_grid[[j]],
+             bayes_bands[[j]]$f_hat,
+             bayes_bands[[j]]$lower,
+             bayes_bands[[j]]$upper)
+  rng <- range(all_y, finite = TRUE)
+  pad <- 0.05 * diff(rng)
+  shared_ylim[[j]] <- rng + c(-pad, pad)
+}
+
+# ---- Combined plot: REML (top row) vs Bayes (bottom row), shared y-axes ----
+pdf("munich_rent/munich_marginals_comparison.pdf", width = 10, height = 8)
+par(mfrow = c(2, 2))
+
+# Row 1: REML
+for (j in 1:p_smooth) {
   if (j == 1) {
     x_orig <- x_grid * (area_max - area_min) + area_min
     xlab <- "Floor space (m^2)"
@@ -444,12 +446,27 @@ for (j in 1:p_smooth) {
     x_orig <- x_grid * (yearc_max - yearc_min) + yearc_min
     xlab <- "Year of construction"
   }
-  
-  plot(x_orig, band$f_hat, type = "n",
-       main = paste0("Bayes: f(", smooth_names[j], ")"),
+  plot(x_orig, reml_curves$fhat_grid[[j]], type = "l", lwd = 2,
+       main = paste0("REML (M=6): f(", smooth_names[j], ")"),
        xlab = xlab, ylab = paste0("f_", j, "(x)"),
-       ylim = range(c(band$lower, band$upper)))
-  
+       ylim = shared_ylim[[j]], col = "blue")
+  abline(h = 0, lty = 3, col = "gray50")
+}
+
+# Row 2: Bayes
+for (j in 1:p_smooth) {
+  band <- bayes_bands[[j]]
+  if (j == 1) {
+    x_orig <- x_grid * (area_max - area_min) + area_min
+    xlab <- "Floor space (m^2)"
+  } else {
+    x_orig <- x_grid * (yearc_max - yearc_min) + yearc_min
+    xlab <- "Year of construction"
+  }
+  plot(x_orig, band$f_hat, type = "n",
+       main = paste0("Bayes (M=20): f(", smooth_names[j], ")"),
+       xlab = xlab, ylab = paste0("f_", j, "(x)"),
+       ylim = shared_ylim[[j]])
   polygon(c(x_orig, rev(x_orig)), c(band$lower, rev(band$upper)),
           col = rgb(0.2, 0.4, 0.8, 0.2), border = NA)
   lines(x_orig, band$f_hat, lwd = 2, col = "blue")
@@ -459,7 +476,7 @@ for (j in 1:p_smooth) {
          lty = c(1, NA), lwd = c(2, 10), bty = "n", cex = 0.85)
 }
 dev.off()
-cat("  Plot: munich_rent/munich_bayes_marginals.pdf\n")
+cat("  Plot: munich_rent/munich_marginals_comparison.pdf\n")
 
 
 # ---- Trace plots ----
@@ -589,8 +606,7 @@ bayes_summary <- data.frame(
 write.csv(bayes_summary, "munich_rent/munich_bayes_summary.csv", row.names = FALSE)
 
 cat("\nOutputs in munich_rent/:\n")
-cat("  munich_reml_marginals.pdf\n")
-cat("  munich_bayes_marginals.pdf\n")
+cat("  munich_marginals_comparison.pdf\n")
 cat("  munich_bayes_trace.pdf\n")
 cat("  munich_bayes_tau2s_trace.pdf\n")
 cat("  munich_spatial_effect.pdf\n")
