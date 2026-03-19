@@ -1,0 +1,121 @@
+"Notes"	"County"	"County Code"	Deaths	Population	Crude Rate
+	"Alcona County, MI"	"26001"	85	69335	122.6
+	"Alger County, MI"	"26003"	49	58448	83.8
+	"Allegan County, MI"	"26005"	333	651517	51.1
+	"Alpena County, MI"	"26007"	135	185502	72.8
+	"Antrim County, MI"	"26009"	107	143021	74.8
+	"Arenac County, MI"	"26011"	84	103126	81.5
+	"Baraga County, MI"	"26013"	38	53142	71.5
+	"Barry County, MI"	"26015"	202	349696	57.8
+	"Bay County, MI"	"26017"	493	658031	74.9
+	"Benzie County, MI"	"26019"	80	101637	78.7
+	"Berrien County, MI"	"26021"	656	962776	68.1
+	"Branch County, MI"	"26023"	181	278741	64.9
+	"Calhoun County, MI"	"26025"	520	832074	62.5
+	"Cass County, MI"	"26027"	194	310518	62.5
+	"Charlevoix County, MI"	"26029"	103	158860	64.8
+	"Cheboygan County, MI"	"26031"	117	162201	72.1
+	"Chippewa County, MI"	"26033"	123	232391	52.9
+	"Clare County, MI"	"26035"	210	189596	110.8
+	"Clinton County, MI"	"26037"	151	409855	36.8
+	"Crawford County, MI"	"26039"	68	87060	78.1
+	"Delta County, MI"	"26041"	177	229438	77.1
+	"Dickinson County, MI"	"26043"	114	162868	70.0
+	"Eaton County, MI"	"26045"	280	636993	44.0
+	"Emmet County, MI"	"26047"	131	193796	67.6
+	"Genesee County, MI"	"26049"	1689	2641518	63.9
+	"Gladwin County, MI"	"26051"	139	159828	87.0
+	"Gogebic County, MI"	"26053"	88	103376	85.1
+	"Grand Traverse County, MI"	"26055"	245	486918	50.3
+	"Gratiot County, MI"	"26057"	117	254842	45.9
+	"Hillsdale County, MI"	"26059"	170	282541	60.2
+	"Houghton County, MI"	"26061"	112	215739	51.9
+	"Huron County, MI"	"26063"	151	212365	71.1
+	"Ingham County, MI"	"26065"	645	1691194	38.1
+	"Ionia County, MI"	"26067"	179	379950	47.1
+	"Iosco County, MI"	"26069"	177	162129	109.2
+	"Iron County, MI"	"26071"	88	76295	115.3
+	"Isabella County, MI"	"26073"	185	393380	47.0
+	"Jackson County, MI"	"26075"	671	966393	69.4
+	"Kalamazoo County, MI"	"26077"	745	1450218	51.4
+	"Kalkaska County, MI"	"26079"	75	102510	73.2
+	"Kent County, MI"	"26081"	1486	3510053	42.3
+	"Keweenaw County, MI"	"26083"	10	13151	76.0 (Unreliable)
+	"Lake County, MI"	"26085"	74	69327	106.7
+	"Lapeer County, MI"	"26087"	244	540478	45.1
+	"Leelanau County, MI"	"26089"	62	129591	47.8
+	"Lenawee County, MI"	"26091"	331	602096	55.0
+	"Livingston County, MI"	"26093"	432	1013351	42.6
+	"Luce County, MI"	"26095"	30	41761	71.8
+	"Mackinac County, MI"	"26097"	77	70370	109.4
+	"Macomb County, MI"	"26099"	3028	4865342	62.2
+	"Manistee County, MI"	"26101"	114	149601	76.2
+	"Marquette County, MI"	"26103"	250	390832	64.0
+	"Mason County, MI"	"26105"	148	171698	86.2
+	"Mecosta County, MI"	"26107"	163	250710	65.0
+	"Menominee County, MI"	"26109"	108	150222	71.9
+	"Midland County, MI"	"26111"	261	502114	52.0
+	"Missaukee County, MI"	"26113"	71	89167	79.6
+	"Monroe County, MI"	"26115"	500	895349	55.8
+	"Montcalm County, MI"	"26117"	211	375958	56.1
+	"Montmorency County, MI"	"26119"	77	62031	124.1
+	"Muskegon County, MI"	"26121"	654	1031466	63.4
+	"Newaygo County, MI"	"26123"	238	292931	81.2
+	"Oakland County, MI"	"26125"	3444	7202291	47.8
+	"Oceana County, MI"	"26127"	67	163471	41.0
+	"Ogemaw County, MI"	"26129"	144	131436	109.6
+	"Ontonagon County, MI"	"26131"	43	45748	94.0
+	"Osceola County, MI"	"26133"	104	142168	73.2
+	"Oscoda County, MI"	"26135"	59	56025	105.3
+	"Otsego County, MI"	"26137"	92	145160	63.4
+	"Ottawa County, MI"	"26139"	456	1486761	30.7
+	"Presque Isle County, MI"	"26141"	70	85367	82.0
+	"Roscommon County, MI"	"26143"	188	154194	121.9
+	"Saginaw County, MI"	"26145"	815	1253434	65.0
+	"St. Clair County, MI"	"26147"	657	999980	65.7
+	"St. Joseph County, MI"	"26149"	248	373879	66.3
+	"Sanilac County, MI"	"26151"	177	268500	65.9
+	"Schoolcraft County, MI"	"26153"	52	53297	97.6
+	"Shiawassee County, MI"	"26155"	230	434114	53.0
+	"Tuscola County, MI"	"26157"	217	349106	62.2
+	"Van Buren County, MI"	"26159"	261	460744	56.6
+	"Washtenaw County, MI"	"26161"	697	2002217	34.8
+	"Wayne County, MI"	"26163"	7438	12079709	61.6
+	"Wexford County, MI"	"26165"	98	187860	52.2
+"Total"			34233	60092878	57.0
+"---"
+"Dataset: Compressed Mortality, 1999-2016"
+"Query Parameters:"
+"ICD-10 Codes: C34.0 (Main bronchus - Malignant neoplasms); C34.1 (Upper lobe, bronchus or lung - Malignant neoplasms); C34.2"
+"(Middle lobe, bronchus or lung - Malignant neoplasms); C34.3 (Lower lobe, bronchus or lung - Malignant neoplasms); C34.8"
+"(Overlapping lesion of bronchus and lung - Malignant neoplasms); C34.9 (Bronchus or lung, unspecified - Malignant neoplasms)"
+"States: Michigan (26)"
+"Year: 2000; 2001; 2002; 2003; 2004; 2005"
+"Group By: County"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/cmf.html for more information."
+"---"
+"Query Date: Mar 19, 2026 3:37:25 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality: Compressed Mortality File 1999-2016 on CDC WONDER Online Database, released June 2017. Data are from the"
+"Compressed Mortality File 1999-2016 Series 20 No. 2U, 2016, as compiled from data provided by the 57 vital statistics"
+"jurisdictions through the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/cmf-icd10.html on Mar 19, 2026"
+"3:37:25 AM"
+"---"
+Caveats:
+"1. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Unreliable."
+"2. About population figures for regions, divisions, states and counties: population figures for 1999 are from the 1990-1999"
+"series of bridged-race intercensal estimates of the July 1 resident population; population figures for 2000 and 2010 are"
+"bridged-race April 1 census counts; population figures for 2001-2009 are from the revised 2000-2009 series of bridged-race"
+"intercensal estimates of the July 1 resident population; and population figures for 2011-2015 are bridged-race postcensal"
+"estimates of the July 1 resident population, from the Vintage 2015 series released by NCHS on June 28, 2016."
+"3. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/cmf.html#Age Group."
+"4. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#ICD-10 Changes."

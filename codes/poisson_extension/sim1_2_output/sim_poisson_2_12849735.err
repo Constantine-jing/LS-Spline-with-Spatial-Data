@@ -1,0 +1,17 @@
+Warning messages:
+1: In title(...) :
+  for 'LOW — X1 (RMSE=0.0612)' in 'mbcsToSbcs': - substituted for — (U+2014)
+2: In title(...) :
+  for 'LOW — X2 (RMSE=0.1073)' in 'mbcsToSbcs': - substituted for — (U+2014)
+3: In title(...) :
+  for 'LOW — X3 (RMSE=0.0842)' in 'mbcsToSbcs': - substituted for — (U+2014)
+4: In title(...) :
+  for 'LOW — X4 (RMSE=0.1150)' in 'mbcsToSbcs': - substituted for — (U+2014)
+5: In title(...) :
+  for 'HIGH — X1 (RMSE=0.0599)' in 'mbcsToSbcs': - substituted for — (U+2014)
+6: In title(...) :
+  for 'HIGH — X2 (RMSE=0.0195)' in 'mbcsToSbcs': - substituted for — (U+2014)
+7: In title(...) :
+  for 'HIGH — X3 (RMSE=0.0344)' in 'mbcsToSbcs': - substituted for — (U+2014)
+8: In title(...) :
+  for 'HIGH — X4 (RMSE=0.2475)' in 'mbcsToSbcs': - substituted for — (U+2014)

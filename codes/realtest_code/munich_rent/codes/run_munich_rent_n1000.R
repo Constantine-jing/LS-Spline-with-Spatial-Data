@@ -67,10 +67,12 @@ n_burn <- 2500
 n_thin <- 1
 nu     <- 1.5        # Matern smoothness (fixed)
 
-# MH proposal SDs (tuned from simulations)
-mh_sd_sigma2 <- 0.5
-mh_sd_tau2   <- 0.3
-mh_sd_rho    <- 0.3
+# MH proposal SDs
+# Acceptance from first run: sigma2=0.608 tau2=0.191 rho=0.809
+# Target: 0.20-0.40. Increase sigma2 and rho proposals.
+mh_sd_sigma2 <- 1.0    # was 0.5, accept=0.608 -> increase
+mh_sd_tau2   <- 0.3    # was 0.3, accept=0.191 -> keep (borderline low)
+mh_sd_rho    <- 0.8    # was 0.3, accept=0.809 -> increase substantially
 
 dir.create("munich_rent", showWarnings = FALSE)
 stopifnot(ls_tests())
@@ -209,25 +211,30 @@ cat(sprintf("  Unique locations: %d (of %d obs)\n", n_unique, n))
 #   cols 2 : (1+p_linear) = binary linear covariates
 #   cols after that  = spline basis (referenced by col_map)
 #
-# Strategy: after building Q0 the usual way, give the linear
-# columns a vague 1/kappa2 prior (same as intercept).
+# Strategy: intercept gets vague 1/kappa2 prior,
+# linear binary columns get a moderately informative prior (sd=10),
+# spline blocks get RW2 penalty.
+# sd=10 for binary coefs: plausible range of ±20 Euro/m^2 at 95% level.
+# This is still weakly informative but prevents the sampler from
+# wandering in an absurdly wide prior (sd=1000 was the old kappa2=1e6).
 
 build_block_prior_precision_extended <- function(col_map, tau2_s, kappa2 = 1e6,
                                                   eps_ridge = 1e-6,
-                                                  n_linear = 0) {
+                                                  n_linear = 0,
+                                                  kappa2_linear = 100) {
   # col_map here is ALREADY shifted (indices account for linear cols).
   # p_total = 1 (intercept) + n_linear + n_spline_cols
   p_covs   <- length(col_map)
   p_total  <- 1 + max(unlist(col_map))
   Q0       <- matrix(0, p_total, p_total)
   
-  # Intercept
+  # Intercept: vague
   Q0[1, 1] <- 1 / kappa2
   
-  # Linear columns: vague prior (same as intercept)
+  # Linear columns: moderately informative (sd = sqrt(kappa2_linear))
   if (n_linear > 0) {
     for (k in 2:(1 + n_linear)) {
-      Q0[k, k] <- 1 / kappa2
+      Q0[k, k] <- 1 / kappa2_linear
     }
   }
   
