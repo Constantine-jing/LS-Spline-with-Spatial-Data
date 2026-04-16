@@ -69,7 +69,9 @@ build_interaction_prior_precision <- function(col_map_full, K_main_list,
                                               K_int_list, tau2_s_main,
                                               tau2_s_int, kappa2 = 1e6,
                                               eps_ridge = 1e-6) {
-  p_total <- 1L + sum(sapply(K_main_list, nrow)) + sum(sapply(K_int_list, nrow))
+  n_main <- if (length(K_main_list) > 0) sum(vapply(K_main_list, nrow, integer(1))) else 0L
+  n_int  <- if (length(K_int_list)  > 0) sum(vapply(K_int_list,  nrow, integer(1))) else 0L
+  p_total <- 1L + n_main + n_int
   Q0 <- matrix(0, p_total, p_total)
 
   # Intercept
