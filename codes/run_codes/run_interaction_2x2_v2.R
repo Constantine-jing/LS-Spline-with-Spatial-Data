@@ -646,6 +646,134 @@ plot_surfaces_v2 <- function(res_obj, outfile) {
 
 
 # ============================================================
+# plot_surfaces_3d_v2(): Fahrmeir/Kneib-style 3D wireframe surfaces
+#
+# Produces 3D perspective plots (persp) for:
+#   Page 1: TRUE f_12 surface (INT DGP)
+#   Page 2: Posterior mean f_12 (Cell D: INT + M1)
+#   Page 3: Posterior mean + upper/lower 95% CI bands (3 surfaces)
+#   Page 4: Posterior mean f_12 (Cell B: NULL + M1) — near-zero
+#   Page 5: Residual (fitted − truth)
+# ============================================================
+plot_surfaces_3d_v2 <- function(res_obj, outfile) {
+  s <- res_obj$settings
+  results <- res_obj$results
+  truth_int <- res_obj$truth_grid_int$f12
+
+  surfD <- results$int_M1$surface12
+  surfB <- results$null_M1$surface12
+
+  pdf(outfile, width = 9, height = 7.5)
+
+  if (is.null(surfD)) {
+    plot.new(); text(0.5, 0.5, "No interaction surface stored")
+    dev.off(); return(invisible(NULL))
+  }
+
+  x1 <- surfD$x1; x2 <- surfD$x2
+
+  # Common z-range for truth + fitted
+  z_all <- c(as.vector(truth_int), as.vector(surfD$post_mean))
+  zlim <- c(min(z_all), max(z_all)) * 1.1
+
+  # Viewing angle (matches Fahrmeir/Kneib style)
+  theta <- -30; phi <- 25
+
+  # Color function for wireframe
+  make_facet_colors <- function(z_mat, pal = "Blue-Red 2") {
+    nrz <- nrow(z_mat); ncz <- ncol(z_mat)
+    # Average of 4 corners per facet
+    z_facet <- (z_mat[-1, -1] + z_mat[-1, -ncz] +
+                  z_mat[-nrz, -1] + z_mat[-nrz, -ncz]) / 4
+    n_col <- 50
+    cols <- hcl.colors(n_col, pal)
+    z_range <- range(z_facet, na.rm = TRUE)
+    if (diff(z_range) == 0) return(rep(cols[n_col %/% 2], length(z_facet)))
+    idx <- findInterval(z_facet, seq(z_range[1], z_range[2], length.out = n_col + 1),
+                        all.inside = TRUE)
+    cols[idx]
+  }
+
+  par(mar = c(1, 1, 3, 1))
+
+  # Page 1: TRUTH
+  persp(x1, x2, truth_int, zlim = zlim,
+        theta = theta, phi = phi, expand = 0.6,
+        col = make_facet_colors(truth_int),
+        shade = 0.3, border = NA, ltheta = 120,
+        xlab = "X1", ylab = "X2", zlab = "f_12",
+        main = sprintf("TRUE f_12  (p=%d, phase %d)\nrange [%.2f, %.2f]",
+                       s$p, s$phase, min(truth_int), max(truth_int)),
+        ticktype = "detailed", cex.main = 1.3)
+
+  # Page 2: Posterior mean (Cell D)
+  persp(x1, x2, surfD$post_mean, zlim = zlim,
+        theta = theta, phi = phi, expand = 0.6,
+        col = make_facet_colors(surfD$post_mean),
+        shade = 0.3, border = NA, ltheta = 120,
+        xlab = "X1", ylab = "X2", zlab = "f_12",
+        main = sprintf("POSTERIOR MEAN f_12  (Cell D: INT + M1)\nRMSE = %.3f, cov = %.2f",
+                       results$int_M1$rmse_f12, results$int_M1$cov_f12),
+        ticktype = "detailed", cex.main = 1.3)
+
+  # Page 3: Posterior mean + CI bands (wireframe with transparency)
+  # Mean as solid colored surface, lo/hi as gray wireframes
+  pmat <- persp(x1, x2, surfD$post_mean, zlim = zlim,
+                theta = theta, phi = phi, expand = 0.6,
+                col = make_facet_colors(surfD$post_mean),
+                shade = 0.3, border = NA, ltheta = 120,
+                xlab = "X1", ylab = "X2", zlab = "f_12",
+                main = sprintf("POSTERIOR MEAN + 95%% CI  (Cell D)\nmean width = %.3f",
+                               mean(surfD$band_width)),
+                ticktype = "detailed", cex.main = 1.3)
+  # Overlay upper band wireframe
+  par(new = TRUE)
+  persp(x1, x2, surfD$post_hi, zlim = zlim,
+        theta = theta, phi = phi, expand = 0.6,
+        col = NA, border = adjustcolor("gray50", alpha.f = 0.3),
+        lwd = 0.3, shade = NA,
+        xlab = "", ylab = "", zlab = "",
+        axes = FALSE, box = FALSE)
+  par(new = TRUE)
+  persp(x1, x2, surfD$post_lo, zlim = zlim,
+        theta = theta, phi = phi, expand = 0.6,
+        col = NA, border = adjustcolor("gray50", alpha.f = 0.3),
+        lwd = 0.3, shade = NA,
+        xlab = "", ylab = "", zlab = "",
+        axes = FALSE, box = FALSE)
+
+  # Page 4: NULL + M1 (Cell B) — should be near-flat
+  if (!is.null(surfB)) {
+    zlim_null <- range(c(as.vector(surfB$post_lo), as.vector(surfB$post_hi))) * 1.2
+    if (diff(zlim_null) < 0.01) zlim_null <- c(-0.1, 0.1)
+    persp(x1, x2, surfB$post_mean, zlim = zlim_null,
+          theta = theta, phi = phi, expand = 0.6,
+          col = make_facet_colors(surfB$post_mean),
+          shade = 0.3, border = NA, ltheta = 120,
+          xlab = "X1", ylab = "X2", zlab = "f_12",
+          main = sprintf("NULL + M1 (Cell B, truth=0)\nRMSE = %.4f, cov of 0 = %.2f",
+                         results$null_M1$rmse_f12, results$null_M1$cov_f12),
+          ticktype = "detailed", cex.main = 1.3)
+  }
+
+  # Page 5: Residual
+  resid_surf <- surfD$post_mean - truth_int
+  zlim_res <- max(abs(resid_surf)) * c(-1, 1) * 1.1
+  persp(x1, x2, resid_surf, zlim = zlim_res,
+        theta = theta, phi = phi, expand = 0.6,
+        col = make_facet_colors(resid_surf),
+        shade = 0.3, border = NA, ltheta = 120,
+        xlab = "X1", ylab = "X2", zlab = "Residual",
+        main = sprintf("RESIDUAL: fitted - truth  (Cell D)\nrange [%.2f, %.2f]",
+                       min(resid_surf), max(resid_surf)),
+        ticktype = "detailed", cex.main = 1.3)
+
+  dev.off()
+  cat(sprintf("  3D surfaces:    %s\n", outfile))
+}
+
+
+# ============================================================
 # plot_diagnostics_v2(): trace plots, posterior densities, ACFs
 #
 # For each cell in the 2x2: one multi-page PDF with:
