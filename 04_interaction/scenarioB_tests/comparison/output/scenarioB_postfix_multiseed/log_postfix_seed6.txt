@@ -1,0 +1,38 @@
+Seed 6 started at 2026-05-10 05:33:24
+Simulated Scenario B at seed=6: n=500, p=3
+[fit_ours_interaction] orthogonalize = TRUE
+  pair 1_2: max |1'W_uv|=1.03e-14  max |W_u'W_uv|=8.59e-15  max |W_v'W_uv|=7.08e-15
+  iter 500/10500  rho=0.077  sigma2=1.913  tau2=1.082  tau2_s_int=0.0104
+  iter 1000/10500  rho=0.055  sigma2=1.419  tau2=0.887  tau2_s_int=0.0032
+  iter 1500/10500  rho=0.062  sigma2=1.403  tau2=0.914  tau2_s_int=0.0202
+  iter 2000/10500  rho=0.059  sigma2=1.464  tau2=0.963  tau2_s_int=0.0047
+  iter 2500/10500  rho=0.084  sigma2=1.891  tau2=1.102  tau2_s_int=0.0045
+  iter 3000/10500  rho=0.066  sigma2=1.552  tau2=0.885  tau2_s_int=0.0036
+  iter 3500/10500  rho=0.062  sigma2=1.828  tau2=0.942  tau2_s_int=0.0094
+  iter 4000/10500  rho=0.096  sigma2=2.267  tau2=0.967  tau2_s_int=0.0168
+  iter 4500/10500  rho=0.064  sigma2=1.555  tau2=1.019  tau2_s_int=0.0069
+  iter 5000/10500  rho=0.041  sigma2=1.529  tau2=0.817  tau2_s_int=0.0082
+  iter 5500/10500  rho=0.061  sigma2=1.594  tau2=0.996  tau2_s_int=0.0027
+  iter 6000/10500  rho=0.066  sigma2=1.324  tau2=0.974  tau2_s_int=0.0029
+  iter 6500/10500  rho=0.059  sigma2=1.294  tau2=0.889  tau2_s_int=0.0148
+  iter 7000/10500  rho=0.065  sigma2=1.713  tau2=0.895  tau2_s_int=0.0087
+  iter 7500/10500  rho=0.083  sigma2=1.140  tau2=1.065  tau2_s_int=0.0068
+  iter 8000/10500  rho=0.060  sigma2=1.458  tau2=0.941  tau2_s_int=0.0048
+  iter 8500/10500  rho=0.080  sigma2=1.300  tau2=1.030  tau2_s_int=0.0032
+  iter 9000/10500  rho=0.077  sigma2=1.746  tau2=1.021  tau2_s_int=0.0052
+  iter 9500/10500  rho=0.074  sigma2=1.306  tau2=1.071  tau2_s_int=0.0095
+  iter 10000/10500  rho=0.066  sigma2=1.361  tau2=1.036  tau2_s_int=0.0106
+  iter 10500/10500  rho=0.056  sigma2=1.501  tau2=1.036  tau2_s_int=0.0051
+  Accept rates: sigma2=0.355  tau2=0.319  rho=0.458
+
+Fit complete in 156.8 minutes.
+Saved: comparison/output/scenarioB_postfix_multiseed/fit_postfix_seed6.rds
+
+---- Quick verdict for this seed ----
+  RMSE_f1 = 0.1055   cov_f1 = 1.000
+  RMSE_f2 = 0.0780   cov_f2 = 1.000
+  RMSE_f3 = 0.0661   cov_f3 = 1.000
+  RMSE_f1_2 = 0.0764
+  RMSE_f1_3 = 0.0477
+  RMSE_f2_3 = 0.0650
+Seed 6 ended at 2026-05-10 08:10:16

@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=medsat_n1500_s2
+#SBATCH --ntasks=1
+#SBATCH --mem=64G
+#SBATCH --time=0-48:00:00
+#SBATCH --mail-user=mjd4d@umsystem.edu
+#SBATCH --mail-type=FAIL,END
+#SBATCH --partition=general
+#SBATCH --out=output/logs/medsat_n1500_s2-%j.out
+
+set -e
+module load r/4.4.0
+cd ~/medsat-pilot
+
+Rscript scripts/run_n1500_seed2.R

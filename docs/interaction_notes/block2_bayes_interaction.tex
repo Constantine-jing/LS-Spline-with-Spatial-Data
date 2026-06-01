@@ -1,0 +1,146 @@
+% =================================================================
+% [BLOCK 2]  --  Bayesian estimation: interaction priors and sampler
+%
+% Insertion location:
+%   Inside \subsection{Bayesian estimation}\label{sec:bayes_model},
+%   as a new \subsubsection placed AFTER
+%   \subsubsection{Posterior computation (collapsed Gibbs sampler)}
+%       \label{sec:bayes_mcmc}
+%   (i.e. after the enumerate list that ends with the derived \bar{\boldsymbol b}
+%   step and the posterior-summaries paragraph).
+%
+% References (resolved from earlier sections of the document):
+%   \ref{sec:int_motivation}, \ref{sec:int_matrix_form}  -- Block 1
+%   \ref{sec:bayes_spec}, \ref{sec:bayes_prior},
+%   \ref{sec:bayes_mcmc}                                 -- existing Bayesian
+%                                                           specification
+%   \eqref{eq:rw2_prior}                                 -- 1D RW2 prior
+%   \eqref{eq:K_beta_2d}                                 -- Block 1 penalty
+% =================================================================
+
+\subsubsection{Priors and posterior computation for the interaction blocks}%
+\label{sec:bayes_int_prior}
+
+When the mean function is extended with pairwise interactions as in
+Section~\ref{sec:int_matrix_form}, the Bayesian framework of
+Sections~\ref{sec:bayes_spec}--\ref{sec:bayes_mcmc} carries over structurally: the
+likelihood, the spatial random effect, and the priors on the main-effect coefficients and
+variance components are unchanged. Two additions are required, one on the prior side and
+one on the sampler side.
+
+\paragraph{Prior on the interaction coefficients.}
+For each pair $u<v$, we assign
+\begin{equation}
+\boldsymbol\beta_{uv}\mid\tau^2_{s,uv}
+\;\sim\;N\!\Big(\mathbf 0,\;\tau^2_{s,uv}\,\big(\mathbf K_{uv}^{(\beta)}\big)^{-}\Big),
+\label{eq:int_prior_beta}
+\end{equation}
+where $\mathbf K_{uv}^{(\beta)}$ is the 2D identified RW2 penalty matrix defined in
+\eqref{eq:K_beta_2d} and $(\cdot)^{-}$ is its Moore--Penrose generalised inverse. This is the
+direct tensor-product analogue of the 1D RW2 prior \eqref{eq:rw2_prior}: it penalises
+curvature of the interaction surface along each axis while leaving the directions in the
+null space of $\mathbf K_{uv}^{(\beta)}$ essentially unpenalised. Because the ANOVA
+constraints already remove main-effect and constant components, the remaining null space of
+$\mathbf K_{uv}^{(\beta)}$ has dimension one, corresponding to a bilinear surface component
+that is identifiable under the ANOVA constraints but not penalised by second differences.
+The prior in \eqref{eq:int_prior_beta} is therefore intrinsically rank-deficient, in the same
+sense as the 1D RW2 prior in Section~\ref{sec:bayes_prior}. In computation we add the same
+ridge term $\varepsilon_{\mathrm{ridge}}\mathbf I$ with $\varepsilon_{\mathrm{ridge}}=10^{-6}$
+used for the main-effect blocks to ensure numerical stability.
+
+\paragraph{Prior on the interaction smoothing variance.}
+Each interaction block receives its own smoothing variance,
+\begin{equation}
+\tau^2_{s,uv}\;\sim\;\mathrm{IG}(a_s,b_s),
+\qquad u<v,
+\label{eq:int_prior_tau2s}
+\end{equation}
+independent across pairs and independent of the main-effect smoothing variances
+$\{\tau^2_{s,j}\}$. We use the same default hyperparameters $a_s=1,\,b_s=0.005$ as for the
+main-effect smoothing variances, so that interactions with no true signal are automatically
+shrunk toward flat surfaces while genuinely nonlinear interactions retain flexibility. This
+block-specific prior plays the same adaptive role for pairwise interactions that
+$\{\tau^2_{s,j}\}$ plays for main effects in Section~\ref{sec:bayes_prior}, and it is
+especially useful in settings where only a small number of pairs carry true interaction
+signal: noise pairs are regularised toward zero through small posterior
+$\tau^2_{s,uv}$, producing an implicit variable-selection signal at the pair level.
+
+\paragraph{Extended prior precision.}
+Relative to Section~\ref{sec:bayes_mcmc}, the block-diagonal prior precision $\mathbf Q_0$
+now carries an additional block $\tau^{-2}_{s,uv}\mathbf K_{uv}^{(\beta)}$ for each pair
+$u<v$:
+\begin{equation}
+\mathbf Q_0=\mathrm{blockdiag}\!\left(
+\kappa^{-2},\;
+\tau^{-2}_{s,1}\mathbf K_1^{(\beta)},\ldots,
+\tau^{-2}_{s,p}\mathbf K_p^{(\beta)},\;
+\tau^{-2}_{s,12}\mathbf K_{12}^{(\beta)},\ldots,
+\tau^{-2}_{s,p-1,p}\mathbf K_{p-1,p}^{(\beta)}
+\right)+\varepsilon_{\mathrm{ridge}}\mathbf I.
+\label{eq:int_Q0}
+\end{equation}
+With this extension, the Gaussian full conditional for $\boldsymbol\eta$ in Step~1 of the
+collapsed Gibbs sampler (Section~\ref{sec:bayes_mcmc}) is unchanged in form: it remains
+\[
+\boldsymbol\eta\mid\cdot\sim N(\boldsymbol m_\eta,\mathbf V_\eta),
+\qquad
+\mathbf V_\eta=\big(\mathbf H^\top\boldsymbol\Sigma^{-1}\mathbf H+\mathbf Q_0\big)^{-1},
+\qquad
+\boldsymbol m_\eta=\mathbf V_\eta\,\mathbf H^\top\boldsymbol\Sigma^{-1}\boldsymbol y,
+\]
+where $\mathbf H$ and $\mathbf Q_0$ are their extended versions from
+Section~\ref{sec:int_matrix_form} and \eqref{eq:int_Q0} respectively.
+
+\paragraph{Full conditional for $\tau^2_{s,uv}$.}
+The conjugate inverse-gamma structure used in Step~5 of Section~\ref{sec:bayes_mcmc}
+extends directly to each interaction block. Combining the Gaussian prior
+\eqref{eq:int_prior_beta} with the inverse-gamma prior \eqref{eq:int_prior_tau2s} yields the
+closed-form full conditional
+\begin{equation}
+\tau^2_{s,uv}\mid\boldsymbol\beta_{uv}
+\;\sim\;
+\mathrm{IG}\!\left(a_s+\tfrac{r_{uv}}{2},\;b_s+\tfrac{1}{2}\boldsymbol\beta_{uv}^\top
+\mathbf K_{uv}^{(\beta)}\boldsymbol\beta_{uv}\right),
+\qquad
+r_{uv}=(M_u-1)(M_v-1)-1,
+\label{eq:int_fc_tau2s}
+\end{equation}
+where $r_{uv}$ is the rank of $\mathbf K_{uv}^{(\beta)}$ established in
+Section~\ref{sec:int_penalty}.
+
+\paragraph{Extended collapsed Gibbs sampler.}
+The sampler of Section~\ref{sec:bayes_mcmc} is therefore augmented by a single additional
+step, inserted between the main-effect smoothing-variance update (Step~5) and the derived
+$\boldsymbol b$ recovery (Step~6):
+\begin{itemize}
+\item[\textbf{5$'$.}] \textbf{Update each $\tau^2_{s,uv}$} by a direct draw from
+\eqref{eq:int_fc_tau2s}, for every pair $u<v$ included in the model.
+\end{itemize}
+All other sampler components---the Metropolis--Hastings updates for
+$(\sigma^2,\tau^2,\rho)$ on the marginal log-likelihood, the Gaussian update for
+$\boldsymbol\eta$, and the posterior recovery of $\boldsymbol b$---are unchanged, because
+the marginal likelihood
+\[
+\boldsymbol y\mid\boldsymbol\eta,\sigma^2,\tau^2,\rho\;\sim\;
+N\!\big(\mathbf H\boldsymbol\eta,\;\sigma^2\mathbf R(\rho,\nu)+\tau^2\mathbf I_n\big)
+\]
+depends on the interaction blocks only through the extended mean $\mathbf H\boldsymbol\eta$.
+In particular, the collapsed representation continues to eliminate the
+$\sigma^2$--$\boldsymbol b$ coupling that motivated the sampler design in
+Section~\ref{sec:bayes_mcmc}: the interaction extension changes only the fixed-effect
+dimension of $\boldsymbol\eta$, not the covariance structure of the marginal likelihood.
+
+\paragraph{Posterior summaries of the interaction surface.}
+For each pair $u<v$ and each evaluation point $(x_u,x_v)\in[0,1]^2$, the posterior draw of
+the interaction surface is
+\begin{equation}
+f_{u,v}^{(t)}(x_u,x_v)
+=\big(w_u(x_u)\otimes w_v(x_v)\big)^\top\boldsymbol\beta_{uv}^{(t)},
+\label{eq:int_post_draw}
+\end{equation}
+where $\boldsymbol\beta_{uv}^{(t)}$ is the $t$th retained posterior draw and
+$w_j(x)=\mathbf T_j^\top z_j(x)$ is the identified LS-basis row vector at $x$ (the
+interaction analogue of the 1D evaluation used in Section~\ref{sec:bayes_mcmc}). Pointwise
+posterior means and $95\%$ credible bands are obtained from the empirical distribution of
+$\{f_{u,v}^{(t)}(x_u,x_v)\}$ over retained iterations, evaluated on a regular
+$50\times 50$ grid over $[0,1]^2$.

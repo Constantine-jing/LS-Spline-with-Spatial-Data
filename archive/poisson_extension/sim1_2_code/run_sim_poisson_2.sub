@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=sim_poisson_2
+#SBATCH --output=sim_poisson_2_%j.out
+#SBATCH --error=sim_poisson_2_%j.err
+#SBATCH --ntasks=1
+#SBATCH --mem=64G
+#SBATCH --time=0-36:00:00
+#SBATCH --partition=general
+#SBATCH --mail-user=mjd4d@umsystem.edu
+#SBATCH --mail-type=FAIL,END
+
+module load r/4.4.0
+cd ~/LS_spline
+
+Rscript run_sim_poisson_2.R

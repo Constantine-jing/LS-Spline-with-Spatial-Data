@@ -1,0 +1,28 @@
+==============================================================
+  P3 (n=1500) vs P1plus (n=500)  -- variance components
+  fit3 RDS:  output/fit_medsat_n1500_seed1_allpairs_hb.rds 
+  fit5 RDS:  output/fit_medsat_p1plus_allpairs_n500_seed1_local.rds 
+==============================================================
+
+parameter              |    p5_mean    p5_q025    p5_q975 p5_ESS |    p3_mean    p3_q025    p3_q975 p3_ESS
+----------------------------------------------------------------------------------------------------------
+sigma2 (noise)         |     0.1253    0.04506        0.3    151 |    0.07696    0.03599     0.1614    252
+tau2_s (spatial)       |      8.118      6.873      9.514    126 |      8.269      7.279      9.425     36
+rho (Matern range)     |    0.01702    0.01476    0.01938    127 |    0.01558    0.01429    0.01713     36
+tau2_s_main[NO2]       |    0.01622    0.00149    0.07152    131 |     0.0101   0.001363     0.0472    151
+tau2_s_main[NDVI]      |   0.008909   0.001136     0.0417    196 |   0.004469  0.0009258    0.01646    286
+tau2_s_main[IMD]       |     0.0066   0.001172      0.028    202 |   0.004786   0.001005     0.0171    263
+tau2_int[NO2xNDVI]     |   0.009866  0.0009023     0.0798      7 |   0.005713  0.0009476    0.01915      8
+tau2_int[NO2xIMD]      |    0.01897   0.001453     0.1119      7 |   0.005774   0.001293    0.01938     12
+tau2_int[NDVIxIMD]     |    0.01289    0.00113    0.04423      7 |   0.006216   0.001576    0.02031     21
+
+MH accept p3: sigma2=0.100 tau2=0.547 rho=0.200  (wall=7.25 h)
+MH accept p5: sigma2=0.163 tau2=0.808 rho=0.219
+
+Notes:
+ - p5 = fit_medsat_p1plus_allpairs_n500_seed1_local.rds (n=500, all-pairs)
+ - p3 = fit_medsat_n1500_seed1_allpairs_hb.rds          (n=1500, all-pairs)
+ - ESS reported out of 2000 post-burn draws in both runs.
+ - tau2_int ESS is the headline mixing concern at n=1500
+   (8-21 / 2000); we should not lean on these blocks for inference
+   from this single run alone.

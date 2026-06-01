@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=sim4_n1000_overlay
+#SBATCH --ntasks=1
+#SBATCH --mem=64G
+#SBATCH --time=0-12:00:00
+#SBATCH --mail-user=mjd4d@umsystem.edu
+#SBATCH --mail-type=FAIL,END
+#SBATCH --partition=general
+#SBATCH --out=sim4_n1000_overlay-%j.out
+
+set -e
+module load r/4.4.0
+cd ~/LS_spline
+
+Rscript run_sim4_n1000_overlay.R

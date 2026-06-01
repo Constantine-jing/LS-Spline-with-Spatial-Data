@@ -1,0 +1,237 @@
+% =================================================================
+% [BLOCK 1]  --  Model section: pairwise interaction extension
+%
+% Insertion location:
+%   Inside \section{Model}, as a new \subsection placed
+%   AFTER  \subsection{Identifiability and reparameterization}
+%   BEFORE \subsection{Estimation approach}
+%
+% Preamble requirements:
+%   \usepackage{amsmath,amssymb,amsthm,mathtools}
+%   \newtheorem{proposition}{Proposition}    % if not already declared
+% =================================================================
+
+\subsection{Pairwise interaction extension}\label{sec:interaction}
+
+\subsubsection{Motivation and model extension}\label{sec:int_motivation}
+The additive model \eqref{eq:model} assumes that the effect of each covariate on the response
+is independent of the remaining covariates. In many applications, however, the effect of one
+covariate depends on the level of another; for example, in multi-pollutant exposure models
+the health effect of pollutant $u$ may be modified by the concurrent level of pollutant $v$.
+To capture such structure, we extend the mean function with pairwise interaction surfaces
+$f_{u,v}(\cdot,\cdot)$ indexed by unordered pairs $\{u,v\}\subseteq\{1,\ldots,p\}$:
+\begin{equation}
+Y(s_r)=\mu+\sum_{j=1}^{p} f_j\!\big(X_j(s_r)\big)
++\sum_{u<v} f_{u,v}\!\big(X_u(s_r),X_v(s_r)\big)
++b(s_r)+\varepsilon_r,
+\qquad r=1,\ldots,n.
+\label{eq:model_int}
+\end{equation}
+The spatial effect $b(\cdot)$ and the nugget $\varepsilon_r$ retain the specifications of
+Section~\ref{sec:matern}. We construct each $f_{u,v}$ by taking the tensor product of the
+one-dimensional reduced LS bases for covariates $u$ and $v$, and we impose ANOVA-type
+identifiability constraints so that each interaction surface represents only the part of the
+mean function that is not already captured by the intercept or by the corresponding main
+effects.
+
+\subsubsection{Tensor product of reduced LS bases}\label{sec:int_tensor}
+Let $z_u(\cdot)\in\mathbb{R}^{M_u}$ and $z_v(\cdot)\in\mathbb{R}^{M_v}$ denote the reduced LS
+basis vectors obtained from Section~\ref{sec:ls_repr}, with knot locations
+$\tau_{1u}<\cdots<\tau_{M_u u}$ and $\tau_{1v}<\cdots<\tau_{M_v v}$ respectively. We model
+the bivariate surface $f_{u,v}:[0,1]^2\to\mathbb{R}$ as a bilinear expansion in the tensor
+product basis,
+\begin{equation}
+f_{u,v}(x_u,x_v)
+=\sum_{m=1}^{M_u}\sum_{\ell=1}^{M_v}
+\theta^{uv}_{m\ell}\;z_{um}(x_u)\,z_{v\ell}(x_v),
+\label{eq:int_expansion}
+\end{equation}
+where $z_{um}(x_u)$ is the $m$th entry of $z_u(x_u)$ and $z_{v\ell}(x_v)$ the $\ell$th entry
+of $z_v(x_v)$.
+
+\paragraph{Two-dimensional knot-ordinate property.}
+Evaluating \eqref{eq:int_expansion} at a grid point $(\tau_{mu},\tau_{\ell v})$ and using the
+1D cardinal property $z_{um'}(\tau_{mu})=\delta_{m'm}$,
+$z_{v\ell'}(\tau_{\ell v})=\delta_{\ell'\ell}$ (Section~\ref{sec:ls_repr}), we obtain the
+2D analogue
+\begin{equation}
+f_{u,v}(\tau_{mu},\tau_{\ell v})=\theta^{uv}_{m\ell}.
+\label{eq:int_knot_ordinate}
+\end{equation}
+That is, each coefficient $\theta^{uv}_{m\ell}$ is directly interpretable as the surface
+height at the knot-grid point $(\tau_{mu},\tau_{\ell v})$. This knot-ordinate property is
+inherited from the LS basis and is not available for B-spline tensor products, where the
+coefficients instead weight smooth but non-cardinal basis functions.
+
+\paragraph{Vectorisation and interaction design matrix.}
+Stack the $M_u\times M_v$ coefficient grid $\{\theta^{uv}_{m\ell}\}$ into a vector
+$\boldsymbol\theta_{uv}\in\mathbb{R}^{M_uM_v}$ with the convention that the $v$-index
+varies fastest:
+\[
+\boldsymbol\theta_{uv}
+=\big(\theta^{uv}_{1,1},\ldots,\theta^{uv}_{1,M_v},\;\theta^{uv}_{2,1},\ldots,\theta^{uv}_{M_u,M_v}\big)^\top.
+\]
+Then the bivariate basis vector for observation $r$ is the Kronecker product
+\[
+\boldsymbol z^{uv}_r\equiv z_u\!\big(X_u(s_r)\big)\otimes z_v\!\big(X_v(s_r)\big)\in\mathbb{R}^{M_uM_v},
+\]
+and the double sum \eqref{eq:int_expansion} can be written compactly as
+$f_{u,v}\!\big(X_u(s_r),X_v(s_r)\big)=\big(\boldsymbol z^{uv}_r\big)^\top\boldsymbol\theta_{uv}$.
+Stacking over $r=1,\ldots,n$, the \emph{interaction design matrix}
+\[
+\mathbf Z_{uv}\in\mathbb{R}^{n\times M_uM_v},
+\qquad
+\text{row }r\text{ of }\mathbf Z_{uv}=\big(z_u(X_u(s_r))\otimes z_v(X_v(s_r))\big)^\top,
+\]
+can be expressed as the row-wise (Khatri--Rao) product of the two main-effect design
+matrices,
+\begin{equation}
+\mathbf Z_{uv}=\mathbf Z_u\odot \mathbf Z_v,
+\label{eq:khatri_rao_Z}
+\end{equation}
+where $(\mathbf A\odot \mathbf B)$ denotes the matrix whose $r$th row is the Kronecker
+product of the $r$th rows of $\mathbf A$ and $\mathbf B$. Equation~\eqref{eq:khatri_rao_Z}
+avoids constructing the full $n^2\times M_uM_v$ Kronecker product and reduces the assembly
+cost to $O(nM_uM_v)$.
+
+\subsubsection{Identifiability of the interaction}\label{sec:int_ident}
+Because the model \eqref{eq:model_int} already contains an intercept $\mu$ and main effects
+$f_u,f_v$, the interaction surface $f_{u,v}$ must represent only variation that cannot be
+absorbed by these lower-order terms. In the standard ANOVA decomposition this requires
+\begin{align}
+\sum_{m=1}^{M_u}\theta^{uv}_{m\ell}&=0\quad\text{for each }\ell=1,\ldots,M_v,
+ \tag{\text{C1}: no hidden $f_v$}\label{eq:int_C1}\\
+\sum_{\ell=1}^{M_v}\theta^{uv}_{m\ell}&=0\quad\text{for each }m=1,\ldots,M_u,
+ \tag{\text{C2}: no hidden $f_u$}\label{eq:int_C2}\\
+\sum_{m=1}^{M_u}\sum_{\ell=1}^{M_v}\theta^{uv}_{m\ell}&=0,
+ \tag{\text{C3}: no hidden constant}\label{eq:int_C3}
+\end{align}
+with \eqref{eq:int_C3} implied by either \eqref{eq:int_C1} or \eqref{eq:int_C2}. These
+constraints can be enforced jointly and in closed form by a Kronecker contrast built from
+the 1D main-effect contrasts $\mathbf T_u\in\mathbb{R}^{M_u\times(M_u-1)}$ and
+$\mathbf T_v\in\mathbb{R}^{M_v\times(M_v-1)}$ from Section~\ref{sec:ident}.
+
+\begin{proposition}\label{prop:int_ident}
+Let $\mathbf T_u$ and $\mathbf T_v$ satisfy $\mathbf 1_{M_u}^\top\mathbf T_u=\mathbf 0^\top$
+and $\mathbf 1_{M_v}^\top\mathbf T_v=\mathbf 0^\top$. Define the identified interaction
+coefficient vector $\boldsymbol\beta_{uv}\in\mathbb{R}^{(M_u-1)(M_v-1)}$ through
+\[
+\boldsymbol\theta_{uv}=(\mathbf T_u\otimes\mathbf T_v)\,\boldsymbol\beta_{uv}.
+\]
+Then constraints \eqref{eq:int_C1}--\eqref{eq:int_C3} hold automatically.
+\end{proposition}
+
+\begin{proof}
+Using $\boldsymbol\theta_{uv}=(\mathbf T_u\otimes\mathbf T_v)\boldsymbol\beta_{uv}$, the
+$(m,\ell)$ entry of the coefficient grid equals
+\[
+\theta^{uv}_{m\ell}
+=\sum_{i=1}^{M_u-1}\sum_{j=1}^{M_v-1}[\mathbf T_u]_{mi}\,[\mathbf T_v]_{\ell j}\,
+[\boldsymbol\beta_{uv}]_{ij}.
+\]
+Fixing $\ell$ and summing over $m$ gives
+\[
+\sum_{m=1}^{M_u}\theta^{uv}_{m\ell}
+=\sum_{i}\sum_{j}\Big(\underbrace{\textstyle\sum_{m}[\mathbf T_u]_{mi}}_{=0}\Big)[\mathbf T_v]_{\ell j}[\boldsymbol\beta_{uv}]_{ij}=0,
+\]
+which is \eqref{eq:int_C1}; the symmetric argument yields \eqref{eq:int_C2}, and
+\eqref{eq:int_C3} follows by summing either of them.
+\end{proof}
+
+Proposition~\ref{prop:int_ident} provides the \emph{identified interaction design matrix}
+\[
+\mathbf W_{uv}\equiv \mathbf Z_{uv}(\mathbf T_u\otimes\mathbf T_v)\in\mathbb{R}^{n\times(M_u-1)(M_v-1)},
+\]
+so that $\big(f_{u,v}(X_u(s_1),X_v(s_1)),\ldots,f_{u,v}(X_u(s_n),X_v(s_n))\big)^\top
+=\mathbf W_{uv}\boldsymbol\beta_{uv}$. Using the mixed-product property of Kronecker products
+together with $\mathbf W_j=\mathbf Z_j\mathbf T_j$ yields the practical identity
+\begin{equation}
+\mathbf W_{uv}=\mathbf W_u\odot\mathbf W_v,
+\label{eq:khatri_rao_W}
+\end{equation}
+i.e.\ the identified interaction design is the row-wise Kronecker product of the identified
+main-effect designs. In implementation one never needs to form $\mathbf Z_{uv}$ or
+$\mathbf T_u\otimes\mathbf T_v$ explicitly; $\mathbf W_{uv}$ is built directly from
+$\mathbf W_u,\mathbf W_v$ via \eqref{eq:khatri_rao_W}.
+
+\paragraph{Dimension.} Each identified interaction block has
+$(M_u-1)(M_v-1)$ parameters. With $M_u=M_v=M$ and $p$ covariates, the total number of
+interaction parameters is $\binom{p}{2}(M-1)^2$, independently of $n$.
+
+\subsubsection{Two-dimensional smoothing penalty}\label{sec:int_penalty}
+Because $\theta^{uv}_{m\ell}$ coincides with the surface height at the knot-grid point
+$(\tau_{mu},\tau_{\ell v})$ (equation~\eqref{eq:int_knot_ordinate}), penalising the curvature
+of $f_{u,v}$ translates directly into penalising second differences of the $\boldsymbol\theta$
+grid along each axis. Let $\mathbf D_2^{(u)}\in\mathbb{R}^{(M_u-2)\times M_u}$ and
+$\mathbf D_2^{(v)}\in\mathbb{R}^{(M_v-2)\times M_v}$ denote the 1D second-difference matrices,
+and set
+$\mathbf K_u^{(\theta)}=(\mathbf D_2^{(u)})^\top\mathbf D_2^{(u)}$ and
+$\mathbf K_v^{(\theta)}=(\mathbf D_2^{(v)})^\top\mathbf D_2^{(v)}$. The total 2D RW2 penalty
+on $\boldsymbol\theta_{uv}$ is
+\[
+\mathcal P(\boldsymbol\theta_{uv})
+=\sum_{\ell=1}^{M_v}\sum_{m=2}^{M_u-1}\!\big(\theta^{uv}_{m+1,\ell}-2\theta^{uv}_{m,\ell}+\theta^{uv}_{m-1,\ell}\big)^2
++\sum_{m=1}^{M_u}\sum_{\ell=2}^{M_v-1}\!\big(\theta^{uv}_{m,\ell+1}-2\theta^{uv}_{m,\ell}+\theta^{uv}_{m,\ell-1}\big)^2,
+\]
+which in matrix form equals $\boldsymbol\theta_{uv}^\top\mathbf K_{uv}^{(\theta)}\boldsymbol\theta_{uv}$ with
+\begin{equation}
+\mathbf K_{uv}^{(\theta)}
+=\mathbf K_u^{(\theta)}\otimes \mathbf I_{M_v}+\mathbf I_{M_u}\otimes \mathbf K_v^{(\theta)}.
+\label{eq:K_theta_2d}
+\end{equation}
+Transforming to the identified coefficients via
+$\boldsymbol\theta_{uv}=(\mathbf T_u\otimes\mathbf T_v)\boldsymbol\beta_{uv}$ and applying
+the mixed-product property of Kronecker products gives
+\begin{equation}
+\mathbf K_{uv}^{(\beta)}
+=(\mathbf T_u\otimes\mathbf T_v)^\top\mathbf K_{uv}^{(\theta)}(\mathbf T_u\otimes\mathbf T_v)
+=\mathbf K_u^{(\beta)}\otimes \mathbf G_v+\mathbf G_u\otimes \mathbf K_v^{(\beta)},
+\label{eq:K_beta_2d}
+\end{equation}
+where
+$\mathbf K_j^{(\beta)}=\mathbf T_j^\top\mathbf K_j^{(\theta)}\mathbf T_j$ is the 1D identified
+RW2 penalty and $\mathbf G_j=\mathbf T_j^\top\mathbf T_j$ is a fixed Gram matrix that arises
+from the sum-to-zero contrast. The matrix $\mathbf K_{uv}^{(\beta)}$ is symmetric positive
+semidefinite; an explicit rank count gives
+$\mathrm{rank}(\mathbf K_{uv}^{(\beta)})=(M_u-1)(M_v-1)-1$, the single null direction
+corresponding to a bilinear component that is identifiable under the ANOVA constraints but
+is not penalised by second differences.
+
+\subsubsection{Full model in matrix form}\label{sec:int_matrix_form}
+Collecting the identified main-effect and interaction blocks, the model \eqref{eq:model_int}
+can be written as
+\begin{equation}
+\boldsymbol y
+=\mu\,\mathbf 1_n
++\sum_{j=1}^{p}\mathbf W_j\boldsymbol\beta_j
++\sum_{u<v}\mathbf W_{uv}\boldsymbol\beta_{uv}
++\boldsymbol b+\boldsymbol\varepsilon.
+\label{eq:model_matrix_int}
+\end{equation}
+Define the extended design matrix and parameter vector
+\[
+\mathbf H=\big(\mathbf 1_n\;\big|\;\mathbf W_1\;\big|\;\cdots\;\big|\;\mathbf W_p\;\big|\;
+\mathbf W_{12}\;\big|\;\mathbf W_{13}\;\big|\;\cdots\;\big|\;\mathbf W_{p-1,p}\big),
+\qquad
+\boldsymbol\eta=\big(\mu,\boldsymbol\beta_1^\top,\ldots,\boldsymbol\beta_p^\top,
+\boldsymbol\beta_{12}^\top,\ldots,\boldsymbol\beta_{p-1,p}^\top\big)^\top,
+\]
+so that \eqref{eq:model_matrix_int} collapses to the same form as the main-effects-only
+model,
+\begin{equation}
+\boldsymbol y=\mathbf H\boldsymbol\eta+\boldsymbol b+\boldsymbol\varepsilon,
+\label{eq:model_matrix_int_compact}
+\end{equation}
+with $\boldsymbol b\sim N(\mathbf 0,\sigma^2\mathbf R(\rho,\nu))$ and
+$\boldsymbol\varepsilon\sim N(\mathbf 0,\tau^2\mathbf I_n)$. The extended $\mathbf H$ has
+$1+\sum_{j=1}^p(M_j-1)+\sum_{u<v}(M_u-1)(M_v-1)$ columns.
+
+\paragraph{Remark (structural inheritance).}
+Equation~\eqref{eq:model_matrix_int_compact} has the \emph{same} structural form as the
+main-effects-only identified model \eqref{eq:model_matrix_ident}; the only change is that
+$\mathbf H$ now contains additional columns built from \eqref{eq:khatri_rao_W}, and the
+prior precision (Section~\ref{sec:bayes_prior}) gains additional block-diagonal entries
+indexed by pairs. Consequently, the profile-REML estimator of
+Section~\ref{sec:estimation} and the collapsed Gibbs sampler of
+Section~\ref{sec:bayes_mcmc} apply verbatim once $\mathbf H$ and the prior precision
+$\mathbf Q_0$ are extended.

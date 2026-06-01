@@ -1,0 +1,108 @@
+
+============================================================
+# Munich Rent Application
+============================================================
+  n = 1000 observations (subsampled from 3082)
+  n distinct districts = 273
+  rentsqm: mean=7.134  sd=2.423  range=[1.26, 15.47]
+  area:  [20, 160] m^2  -> scaled [0,1]
+  yearc: [1918, 1997]      -> scaled [0,1]
+  5 binary covariates: bath, kitchen, cheating, loc_good, loc_top
+  Final n = 1000 (after polygon matching)
+  Coords rescaled to [0,1]^2 + jitter (sd=0.0010)
+  D: max=1.1348  median=0.2915
+  Unique locations: 1000 (of 1000 obs)
+
+####################################################
+# REML: M=6  (continuous covariates only, no linear terms)
+####################################################
+REML status: 0 
+rho_hat    = 0.02704232 
+lambda_hat = 14.65838 
+sigma2_hat = 0.2625479 
+tau2_hat   = 3.848527 
+  REML done in 31.7s
+  sigma2=0.2625  tau2=3.8485  rho=0.0270  lambda=14.6584
+  Intercept (mu): 7.3269
+
+####################################################
+# Full Bayes: M=20  n_iter=10000  n_burn=2500
+# MH sd: sigma2=1.0  tau2=0.3  rho=0.8
+####################################################
+  H: 1000 x 44  (1 intercept + 5 linear + 38 spline)
+  Init from REML: rho=0.0270  sigma2=0.2625  tau2=3.8485
+  Median pairwise dist = 0.2915 -> log_rho_mu = -1.23
+  iter 1000/10000  rho=0.0723  sigma2=0.3346  tau2=3.7868  tau2_s=0.005,0.015
+  iter 2000/10000  rho=0.0434  sigma2=0.2213  tau2=4.2445  tau2_s=0.011,0.007
+  iter 3000/10000  rho=0.1096  sigma2=0.3662  tau2=3.7480  tau2_s=0.008,0.004
+  iter 4000/10000  rho=0.0888  sigma2=0.3780  tau2=3.8008  tau2_s=0.016,0.023
+  iter 5000/10000  rho=0.0361  sigma2=0.2531  tau2=3.8814  tau2_s=0.006,0.005
+  iter 6000/10000  rho=0.0780  sigma2=0.2599  tau2=4.4908  tau2_s=0.015,0.004
+  iter 7000/10000  rho=0.0466  sigma2=0.2330  tau2=4.0454  tau2_s=0.006,0.008
+  iter 8000/10000  rho=0.0244  sigma2=0.2598  tau2=3.7875  tau2_s=0.024,0.003
+  iter 9000/10000  rho=0.0832  sigma2=0.5868  tau2=3.9519  tau2_s=0.020,0.003
+  iter 10000/10000  rho=0.0302  sigma2=0.3184  tau2=3.7579  tau2_s=0.010,0.004
+  MH acceptance: sigma2=0.392  tau2=0.191  rho=0.564
+  Full Bayes done in 20875.4s
+  sigma2: mean=0.3436  95%CI=[0.1556,0.7019]
+  tau2:   mean=3.8627  95%CI=[3.5012,4.2585]
+  rho:    mean=0.0572  95%CI=[0.0149,0.1699]
+  MH accept: sigma2=0.392  tau2=0.191  rho=0.564
+  tau2_s (smoothing variances):
+   area   yearc 
+0.02297 0.01028 
+
+  Linear coefs (posterior mean +/- sd):
+          bath: 0.1622 (10.0524)  95%CI=[-19.6018,19.8343]
+       kitchen: -0.0073 (9.8363)  95%CI=[-19.4625,19.2278]
+      cheating: 0.1350 (9.8964)  95%CI=[-19.2971,19.6228]
+      loc_good: -0.1368 (10.0093)  95%CI=[-19.7035,19.5439]
+       loc_top: -0.0262 (10.0031)  95%CI=[-20.3021,19.5977]
+
+  Spatial b: range=[-0.587, 0.843]  sd=0.334
+null device 
+          1 
+  Plot: munich_rent/munich_marginals_comparison.pdf
+null device 
+          1 
+  Plot: munich_rent/munich_bayes_trace.pdf
+null device 
+          1 
+  Plot: munich_rent/munich_bayes_tau2s_trace.pdf
+null device 
+          1 
+  Plot: munich_rent/munich_spatial_effect.pdf
+
+
+####################################################
+# REML vs Bayes: Munich Rent 1999
+####################################################
+
+--- Variance estimates ---
+  REML:  sigma2=0.2625  tau2=3.8485  rho=0.0270
+  Bayes: sigma2=0.3436  tau2=3.8627  rho=0.0572
+
+--- Linear coefs (Bayes only) ---
+  bath      : 0.1622
+  kitchen   : -0.0073
+  cheating  : 0.1350
+  loc_good  : -0.1368
+  loc_top   : -0.0262
+
+--- Smoothing variances (Bayes tau2_s) ---
+  area: 0.02297
+  yearc: 0.01028
+
+--- Spatial b: range=[-0.587, 0.843]  sd=0.334 ---
+
+--- Timing: REML=31.7s  Bayes=20875.4s ---
+
+Outputs in munich_rent/:
+  munich_marginals_comparison.pdf
+  munich_bayes_trace.pdf
+  munich_bayes_tau2s_trace.pdf
+  munich_spatial_effect.pdf
+  munich_reml_vs_bayes.csv
+  munich_bayes_summary.csv
+
+Done.

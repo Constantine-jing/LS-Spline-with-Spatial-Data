@@ -1,0 +1,30 @@
+==============================================================
+ P4 credible-band-excludes-zero summary
+ 30 x 30 = 900 grid points per interaction surface
+ 4 random subsamples (n=1500) x 3 interaction surfaces = 12 cells
+==============================================================
+
+interaction            | hl1    s2     s3     s4     | max |mean| across seeds
+------------------------------------------------------------------------------
+NO2 x NDVI (1_2)       |   0/900   0/900   0/900   0/900 | 1.869
+NO2 x IMD (1_3)        |   0/900   0/900   0/900   0/900 | 3.518
+NDVI x IMD (2_3)       |   0/900   0/900   0/900   0/900 | 4.983
+
+TOTAL grid points with 95% CI excluding zero across all 12 surfaces: 0 / 10800
+Per surface (mean over seeds):
+  NO2 x NDVI : mean 0.0 / 900 cells across seeds
+  NO2 x IMD : mean 0.0 / 900 cells across seeds
+  NDVI x IMD : mean 0.0 / 900 cells across seeds
+
+Max |posterior-mean| on the grid (per seed x pair):
+       1_2    1_3    2_3
+hl1 0.2727 0.3495 1.3617
+s2  1.6946 1.3695 0.5187
+s3  1.8687 3.5176 0.6983
+s4  0.2598 1.6304 4.9833
+
+For reference, sd(y) at each seed:
+  seed 1 (headline)  : 3.9672
+  seed 2             : 3.9705
+  seed 3             : 3.9607
+  seed 4             : 3.9448

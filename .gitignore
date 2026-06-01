@@ -1,0 +1,21 @@
+# --- RStudio / R session cruft ---
+.Rproj.user/
+.Ruserdata
+*.Rhistory
+*.RData
+
+# --- Heavy regenerable binaries (model fits, archives) ---
+# Genuine small input .rda (rent99*, michigan_lung_data) are force-added; see below.
+*.rds
+*.rda
+*.zip
+
+# --- Bulk result/output directories (regenerable) ---
+results/
+archive/_to_delete/
+
+# --- Downloaded literature (re-obtainable papers) ---
+docs/literature/
+
+# --- MEDSAT raw input data (~297 MB); see 06_medsat_pilot/DATA_SOURCE.md ---
+06_medsat_pilot/data/

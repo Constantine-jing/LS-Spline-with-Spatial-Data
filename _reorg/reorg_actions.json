@@ -1,0 +1,1916 @@
+﻿[
+    {
+        "value":  [
+                      {
+                          "value":  [
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\baby_bayes.R",
+                                            "dest":  "lib\\baby_bayes.R",
+                                            "before":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F",
+                                            "after":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\fit_spatial_reml.R",
+                                            "dest":  "lib\\fit_spatial_reml.R",
+                                            "before":  "0F803D62A7CE9448CF6591977507AD78",
+                                            "after":  "0F803D62A7CE9448CF6591977507AD78"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\gibbs_bayes.R",
+                                            "dest":  "lib\\gibbs_bayes.R",
+                                            "before":  "B8D2CD8B3532518C6539F6ABD8EFE841",
+                                            "after":  "B8D2CD8B3532518C6539F6ABD8EFE841"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\gibbs_interaction.R",
+                                            "dest":  "lib\\gibbs_interaction.R",
+                                            "before":  "9C0A1288E0E8899AE1ED15FC4BF63AFC",
+                                            "after":  "9C0A1288E0E8899AE1ED15FC4BF63AFC"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\gibbs_stage_c_full.R",
+                                            "dest":  "lib\\gibbs_stage_c_full.R",
+                                            "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+                                            "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\ls_basis.R",
+                                            "dest":  "lib\\ls_basis.R",
+                                            "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+                                            "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\ls_interaction.R",
+                                            "dest":  "lib\\ls_interaction.R",
+                                            "before":  "4AE41D9C80024EF4A3732409BE917D47",
+                                            "after":  "4AE41D9C80024EF4A3732409BE917D47"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\ls_interaction_core.cpp",
+                                            "dest":  "lib\\ls_interaction_core.cpp",
+                                            "before":  "81F931C45DE492857D5DE0CE4FEB00E3",
+                                            "after":  "81F931C45DE492857D5DE0CE4FEB00E3"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\marginal_utils.R",
+                                            "dest":  "lib\\marginal_utils.R",
+                                            "before":  "04498862A8B2131139691A94630EB827",
+                                            "after":  "04498862A8B2131139691A94630EB827"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\run_codes\\munich\\spatial_utils.R",
+                                            "dest":  "lib\\spatial_utils.R",
+                                            "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+                                            "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\test and comparison\\canonical_schema.R",
+                                            "dest":  "lib\\canonical_schema.R",
+                                            "before":  "76EAB373FE11104E7B7AA7A507D5A104",
+                                            "after":  "76EAB373FE11104E7B7AA7A507D5A104"
+                                        },
+                                        {
+                                            "group":  "lib/",
+                                            "action":  "copy-to-lib",
+                                            "source":  "codes\\test and comparison\\fit_ours_interaction_wrapper.R",
+                                            "dest":  "lib\\fit_ours_interaction_wrapper.R",
+                                            "before":  "DADA086BC3CA29F082533C63F1807A25",
+                                            "after":  "DADA086BC3CA29F082533C63F1807A25"
+                                        }
+                                    ],
+                          "Count":  12
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\submit_stage_c.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\submit_stage_c.sub",
+                          "before":  "0C459E60262CAF317473AF62B6751F5D",
+                          "after":  "0C459E60262CAF317473AF62B6751F5D"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\gibbs_bayes_v2.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\gibbs_bayes_v2.R",
+                          "before":  "0E90135604812E7B211C5BAEDE64EB26",
+                          "after":  "0E90135604812E7B211C5BAEDE64EB26"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\run_baby_bayes.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\run_baby_bayes.R",
+                          "before":  "5A87BCEEA67A9F0E93982110985ADB37",
+                          "after":  "5A87BCEEA67A9F0E93982110985ADB37"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\baby_bayes.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\baby_bayes.R",
+                          "before":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F",
+                          "after":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\gibbs_stage_c.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\gibbs_stage_c.R",
+                          "before":  "5727DDA8F7AD49A2DA025439698F32AE",
+                          "after":  "5727DDA8F7AD49A2DA025439698F32AE"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\run_stage_c_all.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\run_stage_c_all.R",
+                          "before":  "B30BBE46F1AA6B6C116D6FCFEDAC23B1",
+                          "after":  "B30BBE46F1AA6B6C116D6FCFEDAC23B1"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\run_gibbs_bayes.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\run_gibbs_bayes.R",
+                          "before":  "54EB19AD372BDF678AA112856DD235E0",
+                          "after":  "54EB19AD372BDF678AA112856DD235E0"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\run_stage_c.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\run_stage_c.R",
+                          "before":  "3168528B23A160BCEC6E162CECC57ED7",
+                          "after":  "3168528B23A160BCEC6E162CECC57ED7"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\gibbs_bayes.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\gibbs_bayes.R",
+                          "before":  "B8D2CD8B3532518C6539F6ABD8EFE841",
+                          "after":  "B8D2CD8B3532518C6539F6ABD8EFE841"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move",
+                          "source":  "codes\\BABY_BAYES_codes\\run_gibbs_v2.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\baby_bayes\\run_gibbs_v2.R",
+                          "before":  "F73C59AEC496BC10172008268007BFAC",
+                          "after":  "F73C59AEC496BC10172008268007BFAC"
+                      },
+                      {
+                          "group":  "01_prototypes/baby_bayes/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\BABY_BAYES_codes (10 files, 94286 bytes)",
+                          "dest":  "01_prototypes\\baby_bayes (10 files, 94286 bytes)",
+                          "before":  "count=10;bytes=94286",
+                          "after":  "count=10;bytes=94286"
+                      },
+                      {
+                          "group":  "01_prototypes/hist_codes/",
+                          "action":  "move",
+                          "source":  "codes\\hist_codes\\stage1b_ls_only.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\hist_codes\\stage1b_ls_only.R",
+                          "before":  "A3185BFFF6E96540E69CDB67264C56E3",
+                          "after":  "A3185BFFF6E96540E69CDB67264C56E3"
+                      },
+                      {
+                          "group":  "01_prototypes/hist_codes/",
+                          "action":  "move",
+                          "source":  "codes\\hist_codes\\stage2_spatialX.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\hist_codes\\stage2_spatialX.R",
+                          "before":  "6B0252F9E0D5C56B6154E4DA7327ACE7",
+                          "after":  "6B0252F9E0D5C56B6154E4DA7327ACE7"
+                      },
+                      {
+                          "group":  "01_prototypes/hist_codes/",
+                          "action":  "move",
+                          "source":  "codes\\hist_codes\\stage1_ls_only.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\01_prototypes\\hist_codes\\stage1_ls_only.R",
+                          "before":  "5D5CDE33881FFC89A5EB0019BEB81A89",
+                          "after":  "5D5CDE33881FFC89A5EB0019BEB81A89"
+                      },
+                      {
+                          "group":  "01_prototypes/hist_codes/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\hist_codes (3 files, 17196 bytes)",
+                          "dest":  "01_prototypes\\hist_codes (3 files, 17196 bytes)",
+                          "before":  "count=3;bytes=17196",
+                          "after":  "count=3;bytes=17196"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\Sim3_plot_surfaces.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\Sim3_plot_surfaces.R",
+                          "before":  "8C11EA81B1B0BC4C575590E8A4D9DF0B",
+                          "after":  "8C11EA81B1B0BC4C575590E8A4D9DF0B"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\sim2_sweep.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\sim2_sweep.R",
+                          "before":  "ADD67BBF891A36C39513607E2D4B4BB9",
+                          "after":  "ADD67BBF891A36C39513607E2D4B4BB9"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\marginal_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\marginal_utils.R",
+                          "before":  "04498862A8B2131139691A94630EB827",
+                          "after":  "04498862A8B2131139691A94630EB827"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\plot_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\plot_utils.R",
+                          "before":  "608D037E5AC8FE2651DA1C5B3FD69398",
+                          "after":  "608D037E5AC8FE2651DA1C5B3FD69398"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\run_sim2_marginal.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\run_sim2_marginal.R",
+                          "before":  "72708EC03A4872E8E12424B57F4BEAAA",
+                          "after":  "72708EC03A4872E8E12424B57F4BEAAA"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\run_sim3_marginal_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\run_sim3_marginal_n1000.R",
+                          "before":  "863AD74DD5F770BE23FB58DDF2FCFCFE",
+                          "after":  "863AD74DD5F770BE23FB58DDF2FCFCFE"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\sim5_sweep.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\sim5_sweep.R",
+                          "before":  "494AB74A0DDA06FCA618FD8EA56BC273",
+                          "after":  "494AB74A0DDA06FCA618FD8EA56BC273"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\sim3_sweep.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\sim3_sweep.R",
+                          "before":  "4BA02B733A027ED24696063222328F5B",
+                          "after":  "4BA02B733A027ED24696063222328F5B"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\run_boundary_exp1.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\run_boundary_exp1.R",
+                          "before":  "9B6592602841D3009525190A1CAD6B73",
+                          "after":  "9B6592602841D3009525190A1CAD6B73"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\run_sim1_marginal.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\run_sim1_marginal.R",
+                          "before":  "D0B34BABAFAECEAB6E885DC28C6C0146",
+                          "after":  "D0B34BABAFAECEAB6E885DC28C6C0146"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\fit_spatial_reml.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\fit_spatial_reml.R",
+                          "before":  "0F803D62A7CE9448CF6591977507AD78",
+                          "after":  "0F803D62A7CE9448CF6591977507AD78"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\sim1_sweep.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\sim1_sweep.R",
+                          "before":  "9129F3B715646575CD22007FBA50F2C6",
+                          "after":  "9129F3B715646575CD22007FBA50F2C6"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\sim4_sweep.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\sim4_sweep.R",
+                          "before":  "023AD60E642E7102B77AA24AD45691CA",
+                          "after":  "023AD60E642E7102B77AA24AD45691CA"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\run_boundary.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\run_boundary.R",
+                          "before":  "9A82E1B1A4EF4B77388F5BE0766D9D0F",
+                          "after":  "9A82E1B1A4EF4B77388F5BE0766D9D0F"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\boundary_experiments.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\boundary_experiments.R",
+                          "before":  "4E6F2CAC217C0C25566DE406F33138C0",
+                          "after":  "4E6F2CAC217C0C25566DE406F33138C0"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\variable_selection.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\variable_selection.R",
+                          "before":  "1B452A3418C9FC4ED44B20F5935A8168",
+                          "after":  "1B452A3418C9FC4ED44B20F5935A8168"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\run.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\run.R",
+                          "before":  "5B569E59C86FF2627DBD81E068418906",
+                          "after":  "5B569E59C86FF2627DBD81E068418906"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move",
+                          "source":  "codes\\REML_codes\\run_sim3_marginal.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\02_reml\\run_sim3_marginal.R",
+                          "before":  "1CE266E09EE4C8367A1DD0459695E100",
+                          "after":  "1CE266E09EE4C8367A1DD0459695E100"
+                      },
+                      {
+                          "group":  "02_reml/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\REML_codes (18 files, 108292 bytes)",
+                          "dest":  "02_reml (18 files, 108292 bytes)",
+                          "before":  "count=18;bytes=108292",
+                          "after":  "count=18;bytes=108292"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\run_reml_vs_bayes.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\run_reml_vs_bayes.R",
+                          "before":  "405FB752753CB7F592863A4C151FEA70",
+                          "after":  "405FB752753CB7F592863A4C151FEA70"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\submit_prior_sensitivity.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\submit_prior_sensitivity.sub",
+                          "before":  "5F9E404B3558499D0A6CDD353E8C127D",
+                          "after":  "5F9E404B3558499D0A6CDD353E8C127D"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\submit_full_bayes.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\submit_full_bayes.sub",
+                          "before":  "108DA00515CAD7197EBD7AEA5859C59B",
+                          "after":  "108DA00515CAD7197EBD7AEA5859C59B"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\run_multi_seed.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\run_multi_seed.R",
+                          "before":  "F377108CFFC4B32A433FEC5D555280E1",
+                          "after":  "F377108CFFC4B32A433FEC5D555280E1"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\gibbs_stage_c_full.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\gibbs_stage_c_full.R",
+                          "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+                          "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\submit_reml_vs_bayes.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\submit_reml_vs_bayes.sub",
+                          "before":  "0899FC0D8C19B6CA40EEE23EC4724458",
+                          "after":  "0899FC0D8C19B6CA40EEE23EC4724458"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\submit_multi_seed.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\submit_multi_seed.sub",
+                          "before":  "CEC3F3EA0F7BAA45CC79E0FF44041942",
+                          "after":  "CEC3F3EA0F7BAA45CC79E0FF44041942"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\run_prior_sensitivity.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\run_prior_sensitivity.R",
+                          "before":  "FA95B86E952CC458DE31CB8E1CCBC712",
+                          "after":  "FA95B86E952CC458DE31CB8E1CCBC712"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n400_codes\\run_full_bayes_all.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n400\\run_full_bayes_all.R",
+                          "before":  "F3B2E1AB0CDDC653FCC428418B2816B5",
+                          "after":  "F3B2E1AB0CDDC653FCC428418B2816B5"
+                      },
+                      {
+                          "group":  "03_bayes_main/n400/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\bayes_n400_codes (9 files, 49245 bytes)",
+                          "dest":  "03_bayes_main\\n400 (9 files, 49245 bytes)",
+                          "before":  "count=9;bytes=49245",
+                          "after":  "count=9;bytes=49245"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_test_sim1\\submit_sim1_n1000_overlay.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_test_sim1\\submit_sim1_n1000_overlay.sub",
+                          "before":  "8389693A6523D30FFD402EA69A8C8F7C",
+                          "after":  "8389693A6523D30FFD402EA69A8C8F7C"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_sample_size_comparison.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_sample_size_comparison.R",
+                          "before":  "E5F2D7EC52BF1236E8A9D954E817869E",
+                          "after":  "E5F2D7EC52BF1236E8A9D954E817869E"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_prior_sensitivity_sim4.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_prior_sensitivity_sim4.R",
+                          "before":  "9C6D8A5984E7ED4B60D4F22DC74B4FBC",
+                          "after":  "9C6D8A5984E7ED4B60D4F22DC74B4FBC"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_sample_size_comparison.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_sample_size_comparison.sub",
+                          "before":  "87347C09A9367784838B08470329C521",
+                          "after":  "87347C09A9367784838B08470329C521"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_sim4_n1000_MH1.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_sim4_n1000_MH1.sub",
+                          "before":  "ABBA809C8DFA4F1EE1EBE1E9AEC30BBB",
+                          "after":  "ABBA809C8DFA4F1EE1EBE1E9AEC30BBB"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_sim2_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_sim2_n1000.R",
+                          "before":  "8AF0A260934091E72B98E46DAF7412DC",
+                          "after":  "8AF0A260934091E72B98E46DAF7412DC"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\sim3_n1000_overlay.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\sim3_n1000_overlay.sub",
+                          "before":  "8803B31585E421758080D7D95466DF24",
+                          "after":  "8803B31585E421758080D7D95466DF24"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_sim2_n1000.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_sim2_n1000.sub",
+                          "before":  "DBF226A2902CA111E2A360A6A0ACA4EC",
+                          "after":  "DBF226A2902CA111E2A360A6A0ACA4EC"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\run_sim4_plus_n1000_overlay.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\run_sim4_plus_n1000_overlay.R",
+                          "before":  "1CD19BD8D5034A5CF4E918B825181952",
+                          "after":  "1CD19BD8D5034A5CF4E918B825181952"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_sim4_plus_n1000.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_sim4_plus_n1000.sub",
+                          "before":  "D562959A2099FCD0D55CE044F36ED8E8",
+                          "after":  "D562959A2099FCD0D55CE044F36ED8E8"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_prior_sensitivity.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_prior_sensitivity.sub",
+                          "before":  "5ACAAA51F09A6A6374E57842C8A30FD0",
+                          "after":  "5ACAAA51F09A6A6374E57842C8A30FD0"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_test_sim1\\submit_sim1_n1000_plot_new.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_test_sim1\\submit_sim1_n1000_plot_new.sub",
+                          "before":  "C3949B3F5900B602389DFD686E1F446F",
+                          "after":  "C3949B3F5900B602389DFD686E1F446F"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_sim3_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_sim3_n1000.R",
+                          "before":  "74D57EFDAB84A147DE158F5BAF747EB4",
+                          "after":  "74D57EFDAB84A147DE158F5BAF747EB4"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_sim1_n1000.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_sim1_n1000.sub",
+                          "before":  "77887C2259694C92F1D08B0B808D455D",
+                          "after":  "77887C2259694C92F1D08B0B808D455D"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_sim4_plus_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_sim4_plus_n1000.R",
+                          "before":  "4DB647EAE2796EF8C434A02F21A94732",
+                          "after":  "4DB647EAE2796EF8C434A02F21A94732"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_sim1_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_sim1_n1000.R",
+                          "before":  "292CF7463F5CE164741C4044A695941E",
+                          "after":  "292CF7463F5CE164741C4044A695941E"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_bayes_sim4_n1000.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_bayes_sim4_n1000.sub",
+                          "before":  "2F7700E7C4622A507261C736FC63DEF5",
+                          "after":  "2F7700E7C4622A507261C736FC63DEF5"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_sim4_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_sim4_n1000.R",
+                          "before":  "95207B402BBFD9BEEC3ADD7BE3C3BA9A",
+                          "after":  "95207B402BBFD9BEEC3ADD7BE3C3BA9A"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\sim2_n1000_overlay.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\sim2_n1000_overlay.sub",
+                          "before":  "CB797E8726F546639C20D2839D33FEB7",
+                          "after":  "CB797E8726F546639C20D2839D33FEB7"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\sim4_n1000_overlay.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\sim4_n1000_overlay.sub",
+                          "before":  "2374BAF41416DAC6DB83B0C5F7D57B94",
+                          "after":  "2374BAF41416DAC6DB83B0C5F7D57B94"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\run_sim1_n1000_overlay.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\run_sim1_n1000_overlay.R",
+                          "before":  "A7A18AC6F6AA8CCB195CF0F599904B02",
+                          "after":  "A7A18AC6F6AA8CCB195CF0F599904B02"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\run_sim4_n1000_overlay.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\run_sim4_n1000_overlay.R",
+                          "before":  "DF1FD35E2A3A9977451AE410061CA41C",
+                          "after":  "DF1FD35E2A3A9977451AE410061CA41C"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\run_bayes_sim4_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\run_bayes_sim4_n1000.R",
+                          "before":  "0B7E3140F083CA968DD9423EAD06C59E",
+                          "after":  "0B7E3140F083CA968DD9423EAD06C59E"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\run_sim3_n1000_overlay.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\run_sim3_n1000_overlay.R",
+                          "before":  "F243845C6C4C3763653C446194F0A8D0",
+                          "after":  "F243845C6C4C3763653C446194F0A8D0"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\run_sim2_n1000_overlay.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\run_sim2_n1000_overlay.R",
+                          "before":  "4550E0B353215DC6BFCE27C58F5BA2FD",
+                          "after":  "4550E0B353215DC6BFCE27C58F5BA2FD"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_test_sim1\\run_sim1_n1000_plot_new.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_test_sim1\\run_sim1_n1000_plot_new.R",
+                          "before":  "334FFB0D8252C2F9B512DF1B47CBB735",
+                          "after":  "334FFB0D8252C2F9B512DF1B47CBB735"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\submit_sim3_n1000.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\submit_sim3_n1000.sub",
+                          "before":  "809A65FF20AAE0210531D3D45A2E18F8",
+                          "after":  "809A65FF20AAE0210531D3D45A2E18F8"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes\\bayes_overlay\\sim4plus_n1000_overlay.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\03_bayes_main\\n1000\\bayes_overlay\\sim4plus_n1000_overlay.sub",
+                          "before":  "6A458A6BA2749B118D9C14B6FB9D9B18",
+                          "after":  "6A458A6BA2749B118D9C14B6FB9D9B18"
+                      },
+                      {
+                          "group":  "03_bayes_main/n1000/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\bayes_n1000_mcmc10000_codes (55 files, 774818 bytes)",
+                          "dest":  "03_bayes_main\\n1000 (55 files, 774818 bytes)",
+                          "before":  "count=55;bytes=774818",
+                          "after":  "count=55;bytes=774818"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\ls_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\ls_interaction.R",
+                          "before":  "4AE41D9C80024EF4A3732409BE917D47",
+                          "after":  "4AE41D9C80024EF4A3732409BE917D47"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\ls_basis.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\ls_basis.R",
+                          "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+                          "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_tightbs.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_tightbs.R",
+                          "before":  "B452061105BBF48A798285D967EB4074",
+                          "after":  "B452061105BBF48A798285D967EB4074"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_postfix.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_postfix.R",
+                          "before":  "712C7D4B40DC4B79D49FF59211B442EA",
+                          "after":  "712C7D4B40DC4B79D49FF59211B442EA"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_confirm_h3.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_confirm_h3.R",
+                          "before":  "5E9FA7EF55CF8AED41733F741DD54422",
+                          "after":  "5E9FA7EF55CF8AED41733F741DD54422"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\verify_offby1_fix.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\verify_offby1_fix.R",
+                          "before":  "36C0A854570FEB945417E200EF03FDFA",
+                          "after":  "36C0A854570FEB945417E200EF03FDFA"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\gibbs_stage_c_full.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\gibbs_stage_c_full.R",
+                          "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+                          "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_clamp_main_int_h3.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_clamp_main_int_h3.R",
+                          "before":  "B8E47170AAB95358D02B9F0803079C61",
+                          "after":  "B8E47170AAB95358D02B9F0803079C61"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_postfix_orthoFALSE.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_postfix_orthoFALSE.R",
+                          "before":  "E91E38849989063CA69045FEEB6FA433",
+                          "after":  "E91E38849989063CA69045FEEB6FA433"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_mgcv_scenarioB_multiseed.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_mgcv_scenarioB_multiseed.R",
+                          "before":  "9F3FFD1385F81A70B0C29849AFB58D54",
+                          "after":  "9F3FFD1385F81A70B0C29849AFB58D54"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\gibbs_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\gibbs_interaction.R",
+                          "before":  "9C0A1288E0E8899AE1ED15FC4BF63AFC",
+                          "after":  "9C0A1288E0E8899AE1ED15FC4BF63AFC"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\ls_interaction_core.cpp",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\ls_interaction_core.cpp",
+                          "before":  "81F931C45DE492857D5DE0CE4FEB00E3",
+                          "after":  "81F931C45DE492857D5DE0CE4FEB00E3"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_clamp_all_h3.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_clamp_all_h3.R",
+                          "before":  "CCF28B0A8800B1BDF7A6A19888AAE08D",
+                          "after":  "CCF28B0A8800B1BDF7A6A19888AAE08D"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\simulate_scenario_A.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\simulate_scenario_A.R",
+                          "before":  "BB45788287D6CE2272AEFA40D3706E80",
+                          "after":  "BB45788287D6CE2272AEFA40D3706E80"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\simulate_scenario_B.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\simulate_scenario_B.R",
+                          "before":  "45BE1ACA0C8431684B8E442726D582CC",
+                          "after":  "45BE1ACA0C8431684B8E442726D582CC"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\compare_seed1_metrics.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\compare_seed1_metrics.R",
+                          "before":  "54D6F3F0FAD37737881C51DB3C031B46",
+                          "after":  "54D6F3F0FAD37737881C51DB3C031B46"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\meeting_comparison.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\meeting_comparison.R",
+                          "before":  "96A71053989D7262FFA1E183E99EDBC0",
+                          "after":  "96A71053989D7262FFA1E183E99EDBC0"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_postfix_multiseed.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_postfix_multiseed.R",
+                          "before":  "29905560B219D516F2F435A738753E1B",
+                          "after":  "29905560B219D516F2F435A738753E1B"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\fit_spatial_reml.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\fit_spatial_reml.R",
+                          "before":  "0F803D62A7CE9448CF6591977507AD78",
+                          "after":  "0F803D62A7CE9448CF6591977507AD78"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\plot_seed1_comparison.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\plot_seed1_comparison.R",
+                          "before":  "F6DF6E3419B5685E4C20507680C63144",
+                          "after":  "F6DF6E3419B5685E4C20507680C63144"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\compare_postfix_multiseed.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\compare_postfix_multiseed.R",
+                          "before":  "E8F1628F779C99578ED31CA56FEEC3F8",
+                          "after":  "E8F1628F779C99578ED31CA56FEEC3F8"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\compare_h3_metrics.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\compare_h3_metrics.R",
+                          "before":  "265AB2E772DCC100E351A9D65812631C",
+                          "after":  "265AB2E772DCC100E351A9D65812631C"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\test_fit_ours_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\test_fit_ours_interaction.R",
+                          "before":  "56A2774E145D3D39A73DD73E5928BFC6",
+                          "after":  "56A2774E145D3D39A73DD73E5928BFC6"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\spatial_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\spatial_utils.R",
+                          "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+                          "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\fit_ours_interaction_wrapper.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\fit_ours_interaction_wrapper.R",
+                          "before":  "DADA086BC3CA29F082533C63F1807A25",
+                          "after":  "DADA086BC3CA29F082533C63F1807A25"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\diagnose_orthogonalization.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\diagnose_orthogonalization.R",
+                          "before":  "D7590EB6C66A0AC285E110DACDC3687D",
+                          "after":  "D7590EB6C66A0AC285E110DACDC3687D"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\run_scenarioB_clamp_full_h3.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\run_scenarioB_clamp_full_h3.R",
+                          "before":  "2922C358129B1CC25CA80548B5C3A99E",
+                          "after":  "2922C358129B1CC25CA80548B5C3A99E"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move",
+                          "source":  "codes\\test and comparison\\canonical_schema.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\04_interaction\\scenarioB_tests\\canonical_schema.R",
+                          "before":  "76EAB373FE11104E7B7AA7A507D5A104",
+                          "after":  "76EAB373FE11104E7B7AA7A507D5A104"
+                      },
+                      {
+                          "group":  "04_interaction/scenarioB_tests/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\test and comparison (74 files, 1062047858 bytes)",
+                          "dest":  "04_interaction\\scenarioB_tests (74 files, 1062047858 bytes)",
+                          "before":  "count=74;bytes=1062047858",
+                          "after":  "count=74;bytes=1062047858"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\gibbs_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\gibbs_interaction.R",
+                          "before":  "9C0A1288E0E8899AE1ED15FC4BF63AFC",
+                          "after":  "9C0A1288E0E8899AE1ED15FC4BF63AFC"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\marginal_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\marginal_utils.R",
+                          "before":  "04498862A8B2131139691A94630EB827",
+                          "after":  "04498862A8B2131139691A94630EB827"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\ls_basis.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\ls_basis.R",
+                          "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+                          "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\baby_bayes.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\baby_bayes.R",
+                          "before":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F",
+                          "after":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\ls_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\ls_interaction.R",
+                          "before":  "4AE41D9C80024EF4A3732409BE917D47",
+                          "after":  "4AE41D9C80024EF4A3732409BE917D47"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\ls_interaction_core.cpp",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\ls_interaction_core.cpp",
+                          "before":  "81F931C45DE492857D5DE0CE4FEB00E3",
+                          "after":  "81F931C45DE492857D5DE0CE4FEB00E3"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\gibbs_stage_c_full.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\gibbs_stage_c_full.R",
+                          "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+                          "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\run_munich_rent_local.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\run_munich_rent_local.R",
+                          "before":  "F6441ADF2B6652F379E0A20F0A3EDC3F",
+                          "after":  "F6441ADF2B6652F379E0A20F0A3EDC3F"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\fit_spatial_reml.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\fit_spatial_reml.R",
+                          "before":  "0F803D62A7CE9448CF6591977507AD78",
+                          "after":  "0F803D62A7CE9448CF6591977507AD78"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\spatial_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\spatial_utils.R",
+                          "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+                          "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\gibbs_bayes.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\gibbs_bayes.R",
+                          "before":  "B8D2CD8B3532518C6539F6ABD8EFE841",
+                          "after":  "B8D2CD8B3532518C6539F6ABD8EFE841"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move",
+                          "source":  "codes\\run_codes\\munich\\plot_modelA_checkpoint.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\local\\plot_modelA_checkpoint.R",
+                          "before":  "19CC7B81FC9E3A2A35A4F6225D9B941C",
+                          "after":  "19CC7B81FC9E3A2A35A4F6225D9B941C"
+                      },
+                      {
+                          "group":  "05_munich_rent/local/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\run_codes\\munich (34 files, 95827427 bytes)",
+                          "dest":  "05_munich_rent\\local (34 files, 95827427 bytes)",
+                          "before":  "count=34;bytes=95827427",
+                          "after":  "count=34;bytes=95827427"
+                      },
+                      {
+                          "group":  "05_munich_rent/hpc/",
+                          "action":  "move",
+                          "source":  "codes\\realtest_code\\munich_rent\\codes\\run_munich_rent.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\hpc\\codes\\run_munich_rent.R",
+                          "before":  "75FB1165E6A212D9634E320FED12D657",
+                          "after":  "75FB1165E6A212D9634E320FED12D657"
+                      },
+                      {
+                          "group":  "05_munich_rent/hpc/",
+                          "action":  "move",
+                          "source":  "codes\\realtest_code\\munich_rent\\codes\\run_munich_rent_n1000.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\hpc\\codes\\run_munich_rent_n1000.R",
+                          "before":  "F4F3D58EAE6C8357DA6AF171AFBBC308",
+                          "after":  "F4F3D58EAE6C8357DA6AF171AFBBC308"
+                      },
+                      {
+                          "group":  "05_munich_rent/hpc/",
+                          "action":  "move",
+                          "source":  "codes\\realtest_code\\munich_rent\\codes\\save_munich_data.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\hpc\\codes\\save_munich_data.R",
+                          "before":  "BCCD86E44D3BBD2E29EA832999988602",
+                          "after":  "BCCD86E44D3BBD2E29EA832999988602"
+                      },
+                      {
+                          "group":  "05_munich_rent/hpc/",
+                          "action":  "move",
+                          "source":  "codes\\realtest_code\\munich_rent\\codes\\run_munich_rent_n1000_iter5000_testMH.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\hpc\\codes\\run_munich_rent_n1000_iter5000_testMH.R",
+                          "before":  "B5357EDC43C201897030C4E79B6EF1E1",
+                          "after":  "B5357EDC43C201897030C4E79B6EF1E1"
+                      },
+                      {
+                          "group":  "05_munich_rent/hpc/",
+                          "action":  "move",
+                          "source":  "codes\\realtest_code\\munich_rent\\submit_munich_rent.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\hpc\\submit_munich_rent.sub",
+                          "before":  "4C4672E9BE1329F86A8AD7E2A46105FD",
+                          "after":  "4C4672E9BE1329F86A8AD7E2A46105FD"
+                      },
+                      {
+                          "group":  "05_munich_rent/hpc/",
+                          "action":  "move",
+                          "source":  "codes\\realtest_code\\munich_rent\\submit_munich_rent_n1000.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\05_munich_rent\\hpc\\submit_munich_rent_n1000.sub",
+                          "before":  "4E2C64CF6C2DDFF5B41347CFB4E5F65B",
+                          "after":  "4E2C64CF6C2DDFF5B41347CFB4E5F65B"
+                      },
+                      {
+                          "group":  "05_munich_rent/hpc/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\realtest_code\\munich_rent (18 files, 381534 bytes)",
+                          "dest":  "05_munich_rent\\hpc (18 files, 381534 bytes)",
+                          "before":  "count=18;bytes=381534",
+                          "after":  "count=18;bytes=381534"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_inla.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_inla.R",
+                          "before":  "2A027C9C67531F87ECD86384768D3426",
+                          "after":  "2A027C9C67531F87ECD86384768D3426"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\ls_interaction_core.cpp",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\ls_interaction_core.cpp",
+                          "before":  "81F931C45DE492857D5DE0CE4FEB00E3",
+                          "after":  "81F931C45DE492857D5DE0CE4FEB00E3"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\fit_mgcv_interaction_wrapper.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\fit_mgcv_interaction_wrapper.R",
+                          "before":  "36AEDB0A1198C5A660755552719E0D5B",
+                          "after":  "36AEDB0A1198C5A660755552719E0D5B"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\canonical_schema.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\canonical_schema.R",
+                          "before":  "76EAB373FE11104E7B7AA7A507D5A104",
+                          "after":  "76EAB373FE11104E7B7AA7A507D5A104"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\ls_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\ls_interaction.R",
+                          "before":  "5C2E82A46E7CCCFDAF53E803E9A25C04",
+                          "after":  "5C2E82A46E7CCCFDAF53E803E9A25C04"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\test_fit_ours_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\test_fit_ours_interaction.R",
+                          "before":  "56A2774E145D3D39A73DD73E5928BFC6",
+                          "after":  "56A2774E145D3D39A73DD73E5928BFC6"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\ls_basis.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\ls_basis.R",
+                          "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+                          "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\ls_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\ls_interaction.R",
+                          "before":  "5C2E82A46E7CCCFDAF53E803E9A25C04",
+                          "after":  "5C2E82A46E7CCCFDAF53E803E9A25C04"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\canonical_schema.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\canonical_schema.R",
+                          "before":  "76EAB373FE11104E7B7AA7A507D5A104",
+                          "after":  "76EAB373FE11104E7B7AA7A507D5A104"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\diagnose_f12_absorption.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\diagnose_f12_absorption.R",
+                          "before":  "5562A118CCAC855FCC276592BB753898",
+                          "after":  "5562A118CCAC855FCC276592BB753898"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\gibbs_stage_c_full.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\gibbs_stage_c_full.R",
+                          "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+                          "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\fit_spatial_reml.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\fit_spatial_reml.R",
+                          "before":  "0F803D62A7CE9448CF6591977507AD78",
+                          "after":  "0F803D62A7CE9448CF6591977507AD78"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_ours.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_ours.R",
+                          "before":  "833971C6EBC87DBA1A3754832A6103D7",
+                          "after":  "833971C6EBC87DBA1A3754832A6103D7"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\gibbs_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\gibbs_interaction.R",
+                          "before":  "DB8234D7174E0E839FC69F99530814EA",
+                          "after":  "DB8234D7174E0E839FC69F99530814EA"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\run_stage1_scenarioA_multiseed.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\run_stage1_scenarioA_multiseed.R",
+                          "before":  "51E212C879591ECF140EBB1A22A5381C",
+                          "after":  "51E212C879591ECF140EBB1A22A5381C"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\simulate_scenario_A.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\simulate_scenario_A.R",
+                          "before":  "BB45788287D6CE2272AEFA40D3706E80",
+                          "after":  "BB45788287D6CE2272AEFA40D3706E80"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\fit_ours_interaction_wrapper.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\fit_ours_interaction_wrapper.R",
+                          "before":  "A3708FCB0D52DEA355D8429B2896500C",
+                          "after":  "A3708FCB0D52DEA355D8429B2896500C"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\scenarioA_settings.md",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\scenarioA_settings.md",
+                          "before":  "30DB4F75AA14243D63701316C58602C4",
+                          "after":  "30DB4F75AA14243D63701316C58602C4"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\compute_recovery_metrics.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\compute_recovery_metrics.R",
+                          "before":  "859E82C58A8BFC034922F344A7B4F0D6",
+                          "after":  "859E82C58A8BFC034922F344A7B4F0D6"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\marginal_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\marginal_utils.R",
+                          "before":  "04498862A8B2131139691A94630EB827",
+                          "after":  "04498862A8B2131139691A94630EB827"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_mgcv.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_mgcv.R",
+                          "before":  "53D3FF54D8F5C0FDF487935FA1C4119D",
+                          "after":  "53D3FF54D8F5C0FDF487935FA1C4119D"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\fit_inla_wrapper.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\fit_inla_wrapper.R",
+                          "before":  "2B0B8A4DBE48A2999BEDA7C8B20D7FD5",
+                          "after":  "2B0B8A4DBE48A2999BEDA7C8B20D7FD5"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\marginal_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\marginal_utils.R",
+                          "before":  "04498862A8B2131139691A94630EB827",
+                          "after":  "04498862A8B2131139691A94630EB827"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\test_b_smooth_loose.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\test_b_smooth_loose.R",
+                          "before":  "F63E10879E938A2BBF19CFF48B94C590",
+                          "after":  "F63E10879E938A2BBF19CFF48B94C590"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\gibbs_stage_c_full.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\gibbs_stage_c_full.R",
+                          "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+                          "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\fit_ours_wrapper.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\fit_ours_wrapper.R",
+                          "before":  "DB67A88AA37A481DD696F04905F293A7",
+                          "after":  "DB67A88AA37A481DD696F04905F293A7"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\test_fit_mgcv_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\test_fit_mgcv_interaction.R",
+                          "before":  "ECAC3D845ACB4CB85FEF5044C693D9DC",
+                          "after":  "ECAC3D845ACB4CB85FEF5044C693D9DC"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\test_fit_ours_interaction_ablation.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\test_fit_ours_interaction_ablation.R",
+                          "before":  "09967F6A2FC66D81BB47D457CC5ADAFE",
+                          "after":  "09967F6A2FC66D81BB47D457CC5ADAFE"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\gibbs_interaction.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\gibbs_interaction.R",
+                          "before":  "DB8234D7174E0E839FC69F99530814EA",
+                          "after":  "DB8234D7174E0E839FC69F99530814EA"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\ls_interaction_core.cpp",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\ls_interaction_core.cpp",
+                          "before":  "81F931C45DE492857D5DE0CE4FEB00E3",
+                          "after":  "81F931C45DE492857D5DE0CE4FEB00E3"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\fit_spatial_reml.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\fit_spatial_reml.R",
+                          "before":  "0F803D62A7CE9448CF6591977507AD78",
+                          "after":  "0F803D62A7CE9448CF6591977507AD78"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\ls_basis.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\ls_basis.R",
+                          "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+                          "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\run_interaction_2x2.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\run_interaction_2x2.R",
+                          "before":  "FEC2DFA6B20E4D74BE2B1B1B62D15210",
+                          "after":  "FEC2DFA6B20E4D74BE2B1B1B62D15210"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\spatial_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\spatial_utils.R",
+                          "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+                          "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\fit_mgcv_wrapper.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\fit_mgcv_wrapper.R",
+                          "before":  "C05F46CA60878A2F272255F5B13D9787",
+                          "after":  "C05F46CA60878A2F272255F5B13D9787"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\test_simulate_scenario_A.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\test_simulate_scenario_A.R",
+                          "before":  "76731691C0A6380C4F42547C7D6B4434",
+                          "after":  "76731691C0A6380C4F42547C7D6B4434"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\run_interaction_2x2_p4.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\run_interaction_2x2_p4.R",
+                          "before":  "AD7482239FB7C92D40CE804B52695F8F",
+                          "after":  "AD7482239FB7C92D40CE804B52695F8F"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\run_interaction_2x2_v2.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\run_interaction_2x2_v2.R",
+                          "before":  "E471F378EDC94FC2CD3E17DA7F5C49D6",
+                          "after":  "E471F378EDC94FC2CD3E17DA7F5C49D6"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\test_interaction_on_additive_data.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\test_interaction_on_additive_data.R",
+                          "before":  "865CA3797CFB83732D7AD96F89EFE38F",
+                          "after":  "865CA3797CFB83732D7AD96F89EFE38F"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\test_simulate_scenario_B.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\test_simulate_scenario_B.R",
+                          "before":  "793C100CBB284E05430A602FC25E98A8",
+                          "after":  "793C100CBB284E05430A602FC25E98A8"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\simulate_scenario_B.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\simulate_scenario_B.R",
+                          "before":  "45BE1ACA0C8431684B8E442726D582CC",
+                          "after":  "45BE1ACA0C8431684B8E442726D582CC"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\interaction_week1\\run_interaction_null_test.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\interaction_week1\\run_interaction_null_test.R",
+                          "before":  "7F9CEB01483AAAADDD1638B9A938AD14",
+                          "after":  "7F9CEB01483AAAADDD1638B9A938AD14"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\diagnose_centering_bug.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\diagnose_centering_bug.R",
+                          "before":  "C71D1AC1EE6975879530CDF5675246CF",
+                          "after":  "C71D1AC1EE6975879530CDF5675246CF"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\spatial_utils.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\spatial_utils.R",
+                          "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+                          "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\scenario_A\\scenarioA_settings.md",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\scenario_A\\scenarioA_settings.md",
+                          "before":  "F9F885B826B1FAE8581FBAC3446FB19C",
+                          "after":  "F9F885B826B1FAE8581FBAC3446FB19C"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move",
+                          "source":  "codes\\interaction_old\\comparison_stage1\\simulate_scenario_A.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\interaction_old\\comparison_stage1\\simulate_scenario_A.R",
+                          "before":  "BB45788287D6CE2272AEFA40D3706E80",
+                          "after":  "BB45788287D6CE2272AEFA40D3706E80"
+                      },
+                      {
+                          "group":  "archive/interaction_old/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\interaction_old (127 files, 827790924 bytes)",
+                          "dest":  "archive\\interaction_old (127 files, 827790924 bytes)",
+                          "before":  "count=127;bytes=827790924",
+                          "after":  "count=127;bytes=827790924"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move",
+                          "source":  "codes\\poisson_extension\\michigan_lung_data\\run_michigan_lung_poisson.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\poisson_extension\\michigan_lung_data\\run_michigan_lung_poisson.R",
+                          "before":  "3A74CBDB4909FE1C2A3E2B83A6AEB812",
+                          "after":  "3A74CBDB4909FE1C2A3E2B83A6AEB812"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move",
+                          "source":  "codes\\poisson_extension\\sim1_2_code\\run_sim_poisson_1.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\poisson_extension\\sim1_2_code\\run_sim_poisson_1.R",
+                          "before":  "3E2246789D43EE0745389BFB75E18758",
+                          "after":  "3E2246789D43EE0745389BFB75E18758"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move",
+                          "source":  "codes\\poisson_extension\\sim1_2_code\\run_sim_poisson_2.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\poisson_extension\\sim1_2_code\\run_sim_poisson_2.R",
+                          "before":  "0D1D19B6B9D4D83239D4539FC4AB2C59",
+                          "after":  "0D1D19B6B9D4D83239D4539FC4AB2C59"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move",
+                          "source":  "codes\\poisson_extension\\michigan_lung_data\\run_michigan_lung_poisson.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\poisson_extension\\michigan_lung_data\\run_michigan_lung_poisson.sub",
+                          "before":  "B2802DA8794BF2526B9A9A578C377B24",
+                          "after":  "B2802DA8794BF2526B9A9A578C377B24"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move",
+                          "source":  "codes\\poisson_extension\\sim1_2_code\\run_sim_poisson_2.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\poisson_extension\\sim1_2_code\\run_sim_poisson_2.sub",
+                          "before":  "979BBE7D1B0FE30FD06F4AE14C8B3692",
+                          "after":  "979BBE7D1B0FE30FD06F4AE14C8B3692"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move",
+                          "source":  "codes\\poisson_extension\\sim1_2_code\\run_sim_poisson_1.sub",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\poisson_extension\\sim1_2_code\\run_sim_poisson_1.sub",
+                          "before":  "04F09F53565760382D8DB6585C36E907",
+                          "after":  "04F09F53565760382D8DB6585C36E907"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move",
+                          "source":  "codes\\poisson_extension\\gibbs_stage_c_poisson.R",
+                          "dest":  "G:\\PHD_courses_start_star_star\\Phd_research_proj\\LS-Spline-with-Spatial-Data\\archive\\poisson_extension\\gibbs_stage_c_poisson.R",
+                          "before":  "8F5DA9FDCD8CBCF2AB04245D7094C411",
+                          "after":  "8F5DA9FDCD8CBCF2AB04245D7094C411"
+                      },
+                      {
+                          "group":  "archive/poisson_extension/",
+                          "action":  "move-bulk-verify",
+                          "source":  "codes\\poisson_extension (26 files, 610663 bytes)",
+                          "dest":  "archive\\poisson_extension (26 files, 610663 bytes)",
+                          "before":  "count=26;bytes=610663",
+                          "after":  "count=26;bytes=610663"
+                      }
+                  ],
+        "Count":  178
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_basis.R",
+        "dest":  "04_interaction\\pipeline\\ls_basis.R",
+        "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+        "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\spatial_utils.R",
+        "dest":  "04_interaction\\pipeline\\spatial_utils.R",
+        "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+        "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\marginal_utils.R",
+        "dest":  "04_interaction\\pipeline\\marginal_utils.R",
+        "before":  "04498862A8B2131139691A94630EB827",
+        "after":  "04498862A8B2131139691A94630EB827"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_stage_c_full.R",
+        "dest":  "04_interaction\\pipeline\\gibbs_stage_c_full.R",
+        "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+        "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\fit_spatial_reml.R",
+        "dest":  "04_interaction\\pipeline\\fit_spatial_reml.R",
+        "before":  "0F803D62A7CE9448CF6591977507AD78",
+        "after":  "0F803D62A7CE9448CF6591977507AD78"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\canonical_schema.R",
+        "dest":  "04_interaction\\pipeline\\canonical_schema.R",
+        "before":  "76EAB373FE11104E7B7AA7A507D5A104",
+        "after":  "76EAB373FE11104E7B7AA7A507D5A104"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_interaction.R",
+        "dest":  "04_interaction\\pipeline\\ls_interaction.R",
+        "before":  "4AE41D9C80024EF4A3732409BE917D47",
+        "after":  "4AE41D9C80024EF4A3732409BE917D47"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_interaction_core.cpp",
+        "dest":  "04_interaction\\pipeline\\ls_interaction_core.cpp",
+        "before":  "81F931C45DE492857D5DE0CE4FEB00E3",
+        "after":  "81F931C45DE492857D5DE0CE4FEB00E3"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_interaction.R",
+        "dest":  "04_interaction\\pipeline\\gibbs_interaction.R",
+        "before":  "9C0A1288E0E8899AE1ED15FC4BF63AFC",
+        "after":  "9C0A1288E0E8899AE1ED15FC4BF63AFC"
+    },
+    {
+        "group":  "04_interaction/pipeline/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\fit_ours_interaction_wrapper.R",
+        "dest":  "04_interaction\\pipeline\\fit_ours_interaction_wrapper.R",
+        "before":  "DADA086BC3CA29F082533C63F1807A25",
+        "after":  "DADA086BC3CA29F082533C63F1807A25"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\canonical_schema.R",
+        "dest":  "04_interaction\\scenarioA_compare\\canonical_schema.R",
+        "before":  "76EAB373FE11104E7B7AA7A507D5A104",
+        "after":  "76EAB373FE11104E7B7AA7A507D5A104"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\fit_spatial_reml.R",
+        "dest":  "04_interaction\\scenarioA_compare\\fit_spatial_reml.R",
+        "before":  "0F803D62A7CE9448CF6591977507AD78",
+        "after":  "0F803D62A7CE9448CF6591977507AD78"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_stage_c_full.R",
+        "dest":  "04_interaction\\scenarioA_compare\\gibbs_stage_c_full.R",
+        "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+        "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_basis.R",
+        "dest":  "04_interaction\\scenarioA_compare\\ls_basis.R",
+        "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+        "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\marginal_utils.R",
+        "dest":  "04_interaction\\scenarioA_compare\\marginal_utils.R",
+        "before":  "04498862A8B2131139691A94630EB827",
+        "after":  "04498862A8B2131139691A94630EB827"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\spatial_utils.R",
+        "dest":  "04_interaction\\scenarioA_compare\\spatial_utils.R",
+        "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+        "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\compute_recovery_metrics.R",
+        "dest":  "04_interaction\\scenarioA_compare\\compute_recovery_metrics.R",
+        "before":  "859E82C58A8BFC034922F344A7B4F0D6",
+        "after":  "859E82C58A8BFC034922F344A7B4F0D6"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\fit_inla_wrapper.R",
+        "dest":  "04_interaction\\scenarioA_compare\\fit_inla_wrapper.R",
+        "before":  "2B0B8A4DBE48A2999BEDA7C8B20D7FD5",
+        "after":  "2B0B8A4DBE48A2999BEDA7C8B20D7FD5"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\fit_mgcv_wrapper.R",
+        "dest":  "04_interaction\\scenarioA_compare\\fit_mgcv_wrapper.R",
+        "before":  "C05F46CA60878A2F272255F5B13D9787",
+        "after":  "C05F46CA60878A2F272255F5B13D9787"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\fit_ours_wrapper.R",
+        "dest":  "04_interaction\\scenarioA_compare\\fit_ours_wrapper.R",
+        "before":  "DB67A88AA37A481DD696F04905F293A7",
+        "after":  "DB67A88AA37A481DD696F04905F293A7"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\run_stage1_scenarioA_multiseed.R",
+        "dest":  "04_interaction\\scenarioA_compare\\run_stage1_scenarioA_multiseed.R",
+        "before":  "51E212C879591ECF140EBB1A22A5381C",
+        "after":  "51E212C879591ECF140EBB1A22A5381C"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\scenarioA_settings.md",
+        "dest":  "04_interaction\\scenarioA_compare\\scenarioA_settings.md",
+        "before":  "F9F885B826B1FAE8581FBAC3446FB19C",
+        "after":  "F9F885B826B1FAE8581FBAC3446FB19C"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\simulate_scenario_A.R",
+        "dest":  "04_interaction\\scenarioA_compare\\simulate_scenario_A.R",
+        "before":  "BB45788287D6CE2272AEFA40D3706E80",
+        "after":  "BB45788287D6CE2272AEFA40D3706E80"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_inla.R",
+        "dest":  "04_interaction\\scenarioA_compare\\test_fit_inla.R",
+        "before":  "2A027C9C67531F87ECD86384768D3426",
+        "after":  "2A027C9C67531F87ECD86384768D3426"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_mgcv.R",
+        "dest":  "04_interaction\\scenarioA_compare\\test_fit_mgcv.R",
+        "before":  "53D3FF54D8F5C0FDF487935FA1C4119D",
+        "after":  "53D3FF54D8F5C0FDF487935FA1C4119D"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\test_fit_ours.R",
+        "dest":  "04_interaction\\scenarioA_compare\\test_fit_ours.R",
+        "before":  "833971C6EBC87DBA1A3754832A6103D7",
+        "after":  "833971C6EBC87DBA1A3754832A6103D7"
+    },
+    {
+        "group":  "04_interaction/scenarioA_compare/",
+        "action":  "copy-as-is",
+        "source":  "archive\\interaction_old\\comparison_stage1\\scenario_A\\test_simulate_scenario_A.R",
+        "dest":  "04_interaction\\scenarioA_compare\\test_simulate_scenario_A.R",
+        "before":  "76731691C0A6380C4F42547C7D6B4434",
+        "after":  "76731691C0A6380C4F42547C7D6B4434"
+    },
+    {
+        "group":  "02_reml/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_basis.R",
+        "dest":  "02_reml\\ls_basis.R",
+        "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+        "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+    },
+    {
+        "group":  "02_reml/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\spatial_utils.R",
+        "dest":  "02_reml\\spatial_utils.R",
+        "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+        "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+    },
+    {
+        "group":  "03_bayes_main/n400/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_basis.R",
+        "dest":  "03_bayes_main\\n400\\ls_basis.R",
+        "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+        "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+    },
+    {
+        "group":  "03_bayes_main/n400/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\spatial_utils.R",
+        "dest":  "03_bayes_main\\n400\\spatial_utils.R",
+        "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+        "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+    },
+    {
+        "group":  "03_bayes_main/n400/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\fit_spatial_reml.R",
+        "dest":  "03_bayes_main\\n400\\fit_spatial_reml.R",
+        "before":  "0F803D62A7CE9448CF6591977507AD78",
+        "after":  "0F803D62A7CE9448CF6591977507AD78"
+    },
+    {
+        "group":  "03_bayes_main/n400/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\marginal_utils.R",
+        "dest":  "03_bayes_main\\n400\\marginal_utils.R",
+        "before":  "04498862A8B2131139691A94630EB827",
+        "after":  "04498862A8B2131139691A94630EB827"
+    },
+    {
+        "group":  "03_bayes_main/n400/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\baby_bayes.R",
+        "dest":  "03_bayes_main\\n400\\baby_bayes.R",
+        "before":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F",
+        "after":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F"
+    },
+    {
+        "group":  "03_bayes_main/n400/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_bayes.R",
+        "dest":  "03_bayes_main\\n400\\gibbs_bayes.R",
+        "before":  "B8D2CD8B3532518C6539F6ABD8EFE841",
+        "after":  "B8D2CD8B3532518C6539F6ABD8EFE841"
+    },
+    {
+        "group":  "03_bayes_main/n1000/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_basis.R",
+        "dest":  "03_bayes_main\\n1000\\ls_basis.R",
+        "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+        "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+    },
+    {
+        "group":  "03_bayes_main/n1000/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\spatial_utils.R",
+        "dest":  "03_bayes_main\\n1000\\spatial_utils.R",
+        "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+        "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+    },
+    {
+        "group":  "03_bayes_main/n1000/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\fit_spatial_reml.R",
+        "dest":  "03_bayes_main\\n1000\\fit_spatial_reml.R",
+        "before":  "0F803D62A7CE9448CF6591977507AD78",
+        "after":  "0F803D62A7CE9448CF6591977507AD78"
+    },
+    {
+        "group":  "03_bayes_main/n1000/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\marginal_utils.R",
+        "dest":  "03_bayes_main\\n1000\\marginal_utils.R",
+        "before":  "04498862A8B2131139691A94630EB827",
+        "after":  "04498862A8B2131139691A94630EB827"
+    },
+    {
+        "group":  "03_bayes_main/n1000/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\baby_bayes.R",
+        "dest":  "03_bayes_main\\n1000\\baby_bayes.R",
+        "before":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F",
+        "after":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F"
+    },
+    {
+        "group":  "03_bayes_main/n1000/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_bayes.R",
+        "dest":  "03_bayes_main\\n1000\\gibbs_bayes.R",
+        "before":  "B8D2CD8B3532518C6539F6ABD8EFE841",
+        "after":  "B8D2CD8B3532518C6539F6ABD8EFE841"
+    },
+    {
+        "group":  "03_bayes_main/n1000/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_stage_c_full.R",
+        "dest":  "03_bayes_main\\n1000\\gibbs_stage_c_full.R",
+        "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+        "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+    },
+    {
+        "group":  "05_munich_rent/hpc/codes/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\ls_basis.R",
+        "dest":  "05_munich_rent\\hpc\\codes\\ls_basis.R",
+        "before":  "6A3132B2720451E7C7B53029CE5C0EFE",
+        "after":  "6A3132B2720451E7C7B53029CE5C0EFE"
+    },
+    {
+        "group":  "05_munich_rent/hpc/codes/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\spatial_utils.R",
+        "dest":  "05_munich_rent\\hpc\\codes\\spatial_utils.R",
+        "before":  "F0216DB4FD9FD76269EDC0F3E897CD40",
+        "after":  "F0216DB4FD9FD76269EDC0F3E897CD40"
+    },
+    {
+        "group":  "05_munich_rent/hpc/codes/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\fit_spatial_reml.R",
+        "dest":  "05_munich_rent\\hpc\\codes\\fit_spatial_reml.R",
+        "before":  "0F803D62A7CE9448CF6591977507AD78",
+        "after":  "0F803D62A7CE9448CF6591977507AD78"
+    },
+    {
+        "group":  "05_munich_rent/hpc/codes/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\marginal_utils.R",
+        "dest":  "05_munich_rent\\hpc\\codes\\marginal_utils.R",
+        "before":  "04498862A8B2131139691A94630EB827",
+        "after":  "04498862A8B2131139691A94630EB827"
+    },
+    {
+        "group":  "05_munich_rent/hpc/codes/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\baby_bayes.R",
+        "dest":  "05_munich_rent\\hpc\\codes\\baby_bayes.R",
+        "before":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F",
+        "after":  "8EDC5C1BB9E78BAAEA741A7EC2D38C4F"
+    },
+    {
+        "group":  "05_munich_rent/hpc/codes/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_bayes.R",
+        "dest":  "05_munich_rent\\hpc\\codes\\gibbs_bayes.R",
+        "before":  "B8D2CD8B3532518C6539F6ABD8EFE841",
+        "after":  "B8D2CD8B3532518C6539F6ABD8EFE841"
+    },
+    {
+        "group":  "05_munich_rent/hpc/codes/",
+        "action":  "copy-from-lib",
+        "source":  "lib\\gibbs_stage_c_full.R",
+        "dest":  "05_munich_rent\\hpc\\codes\\gibbs_stage_c_full.R",
+        "before":  "D22348BA7CD55F6DC3459BC08E7F387C",
+        "after":  "D22348BA7CD55F6DC3459BC08E7F387C"
+    }
+]

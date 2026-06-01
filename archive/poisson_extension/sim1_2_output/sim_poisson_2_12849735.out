@@ -1,0 +1,116 @@
+
+========== LOW counts (mean~3-5) ==========
+  [low] DGP: mean(y)=6.2  median(y)=6  max(y)=20  zeros=7/500
+  [low] log(lam) range: [0.69, 2.60]  mean=1.80
+  Initializing via Poisson GLM...
+  GLM init: intercept=1.736, sigma2=0.1000
+  GLM init: log_lam range=[-0.05, 2.74]
+  Initial loglik: 2843.3
+  iter 500/10000  rho=0.2207  sig2=0.1031  ll=2790.9  acc(eta=0.35,b=0.64,rho=0.14)
+  iter 1000/10000  rho=0.1939  sig2=0.1481  ll=2790.0  acc(eta=0.34,b=0.65,rho=0.15)
+  iter 1500/10000  rho=0.1993  sig2=0.2400  ll=2800.9  acc(eta=0.35,b=0.61,rho=0.14)
+  iter 2000/10000  rho=0.2168  sig2=0.1481  ll=2789.7  acc(eta=0.35,b=0.61,rho=0.14)
+  iter 2500/10000  rho=0.1638  sig2=0.1040  ll=2791.9  acc(eta=0.35,b=0.60,rho=0.14)
+  iter 3000/10000  rho=0.1454  sig2=0.0883  ll=2794.4  acc(eta=0.35,b=0.59,rho=0.14)
+  iter 3500/10000  rho=0.1263  sig2=0.1244  ll=2800.2  acc(eta=0.34,b=0.58,rho=0.14)
+  iter 4000/10000  rho=0.1217  sig2=0.2167  ll=2796.1  acc(eta=0.34,b=0.57,rho=0.14)
+  iter 4500/10000  rho=0.2090  sig2=0.3021  ll=2793.0  acc(eta=0.35,b=0.57,rho=0.14)
+  iter 5000/10000  rho=0.2251  sig2=0.1333  ll=2805.2  acc(eta=0.35,b=0.57,rho=0.14)
+  iter 5500/10000  rho=0.2256  sig2=0.2726  ll=2804.4  acc(eta=0.34,b=0.58,rho=0.14)
+  iter 6000/10000  rho=0.2450  sig2=0.2186  ll=2794.6  acc(eta=0.35,b=0.59,rho=0.14)
+  iter 6500/10000  rho=0.3826  sig2=0.4660  ll=2791.1  acc(eta=0.35,b=0.60,rho=0.14)
+  iter 7000/10000  rho=0.5299  sig2=0.6609  ll=2785.3  acc(eta=0.35,b=0.61,rho=0.14)
+  iter 7500/10000  rho=0.3106  sig2=0.3069  ll=2790.2  acc(eta=0.36,b=0.62,rho=0.14)
+  iter 8000/10000  rho=0.2555  sig2=0.2562  ll=2788.4  acc(eta=0.36,b=0.62,rho=0.14)
+  iter 8500/10000  rho=0.2324  sig2=0.1710  ll=2785.1  acc(eta=0.36,b=0.62,rho=0.14)
+  iter 9000/10000  rho=0.2494  sig2=0.1316  ll=2794.1  acc(eta=0.36,b=0.61,rho=0.14)
+  iter 9500/10000  rho=0.2966  sig2=0.2453  ll=2790.2  acc(eta=0.36,b=0.62,rho=0.14)
+  iter 10000/10000  rho=0.2126  sig2=0.1396  ll=2784.3  acc(eta=0.36,b=0.62,rho=0.14)
+  MH acceptance: eta=0.357  b=0.617  rho=0.140
+  [low] Elapsed: 2499.5 seconds
+  [low] sigma2: post=0.2649 true=0.2000
+  [low] rho:    post=0.2483 true=0.2000
+  [low] b_cor:  0.8736
+  [low] RMSE:   0.06120  0.10732  0.08419  0.11504  0.05763  0.07260
+  [low] Cover:  1.000  1.000  1.000  1.000  1.000  1.000
+
+========== HIGH counts (mean~15-30) ==========
+  [high] DGP: mean(y)=73.4  median(y)=70  max(y)=203  zeros=0/500
+  [high] log(lam) range: [2.57, 5.28]  mean=4.20
+  Initializing via Poisson GLM...
+  GLM init: intercept=4.033, sigma2=0.1000
+  GLM init: log_lam range=[1.79, 5.32]
+  Initial loglik: 123790.9
+  iter 500/10000  rho=0.0266  sig2=0.0056  ll=123712.0  acc(eta=0.54,b=0.00,rho=0.19)
+  iter 1000/10000  rho=0.1190  sig2=0.1368  ll=124480.0  acc(eta=0.58,b=0.18,rho=0.17)
+  iter 1500/10000  rho=0.1569  sig2=0.2123  ll=124474.0  acc(eta=0.61,b=0.31,rho=0.17)
+  iter 2000/10000  rho=0.2103  sig2=0.3386  ll=124443.9  acc(eta=0.63,b=0.38,rho=0.16)
+  iter 2500/10000  rho=0.1589  sig2=0.1228  ll=124452.7  acc(eta=0.64,b=0.42,rho=0.16)
+  iter 3000/10000  rho=0.1515  sig2=0.1920  ll=124469.9  acc(eta=0.65,b=0.45,rho=0.16)
+  iter 3500/10000  rho=0.1677  sig2=0.2298  ll=124477.9  acc(eta=0.66,b=0.47,rho=0.15)
+  iter 4000/10000  rho=0.1810  sig2=0.2493  ll=124470.4  acc(eta=0.66,b=0.49,rho=0.15)
+  iter 4500/10000  rho=0.1800  sig2=0.3631  ll=124477.7  acc(eta=0.66,b=0.49,rho=0.15)
+  iter 5000/10000  rho=0.2180  sig2=0.2920  ll=124456.0  acc(eta=0.66,b=0.50,rho=0.15)
+  iter 5500/10000  rho=0.1511  sig2=0.2225  ll=124466.3  acc(eta=0.66,b=0.51,rho=0.14)
+  iter 6000/10000  rho=0.1338  sig2=0.1395  ll=124482.4  acc(eta=0.67,b=0.52,rho=0.14)
+  iter 6500/10000  rho=0.1777  sig2=0.3026  ll=124469.3  acc(eta=0.67,b=0.53,rho=0.14)
+  iter 7000/10000  rho=0.1628  sig2=0.1981  ll=124467.1  acc(eta=0.67,b=0.53,rho=0.14)
+  iter 7500/10000  rho=0.1651  sig2=0.2136  ll=124458.9  acc(eta=0.67,b=0.53,rho=0.14)
+  iter 8000/10000  rho=0.2447  sig2=0.5346  ll=124452.7  acc(eta=0.67,b=0.53,rho=0.14)
+  iter 8500/10000  rho=0.1893  sig2=0.1907  ll=124471.8  acc(eta=0.67,b=0.54,rho=0.14)
+  iter 9000/10000  rho=0.1678  sig2=0.1829  ll=124450.7  acc(eta=0.67,b=0.54,rho=0.14)
+  iter 9500/10000  rho=0.1402  sig2=0.1682  ll=124463.2  acc(eta=0.67,b=0.54,rho=0.14)
+  iter 10000/10000  rho=0.2006  sig2=0.2204  ll=124449.9  acc(eta=0.67,b=0.55,rho=0.14)
+  MH acceptance: eta=0.670  b=0.547  rho=0.141
+  [high] Elapsed: 2504.2 seconds
+  [high] sigma2: post=0.2447 true=0.3000
+  [high] rho:    post=0.1740 true=0.2000
+  [high] b_cor:  0.9777
+  [high] RMSE:   0.05985  0.01952  0.03437  0.24748  0.05253  0.03983
+  [high] Cover:  0.990  1.000  1.000  0.129  0.980  0.941
+
+
+#########################################
+# Sim_Poisson_2: Low vs High Count Comparison
+#########################################
+
+Scenario        sigma2       rho     b_cor   acc_eta     acc_b
+------------------------------------------------------------ 
+low             0.2649    0.2483    0.8736     0.357     0.617
+high            0.2447    0.1740    0.9777     0.670     0.547
+TRUE(low)       0.2000    0.2000
+TRUE(high)      0.3000    0.2000
+
+--- Curve RMSE: X1-X4 ---
+Scenario            X1        X2        X3        X4
+---------------------------------------------------- 
+low            0.06120   0.10732   0.08419   0.11504
+high           0.05985   0.01952   0.03437   0.24748
+
+--- 95% Band Coverage: X1-X6 ---
+Scenario            X1        X2        X3        X4        X5        X6
+---------------------------------------------------------------- 
+low              1.000     1.000     1.000     1.000     1.000     1.000
+high             0.990     1.000     1.000     0.129     0.980     0.941
+
+--- tau2_s shrinkage (garbage X5, X6) ---
+  [low] real(X1-X4): 0.0056 0.0054 0.0034 0.0051
+  [low] garb(X5-X6): 0.0030 0.0031
+  [high] real(X1-X4): 0.0026 0.0017 0.0018 0.0027
+  [high] garb(X5-X6): 0.0018 0.0023
+
+--- Timing ---
+  [low] 2499 seconds
+  [high] 2504 seconds
+null device 
+          1 
+
+  Saved: poisson_out/sim_poisson_2_comparison.pdf
+null device 
+          1 
+  Saved: poisson_out/sim_poisson_2_traces.pdf
+null device 
+          1 
+  Saved: poisson_out/sim_poisson_2_spatial_b.pdf
+
+=== Done ===

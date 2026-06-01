@@ -1,0 +1,89 @@
+=== Michigan Lung Cancer: Poisson Spatial Additive Model ===
+  Loaded: 83 counties
+  Deaths: mean=412.4, range=[10, 7438]
+
+  Found 4 covariates: poverty, pct_65plus, median_income, pct_nonwhite
+  n = 83 counties
+  Distance range: [0.0276, 1.2063]
+  Using M = 10 knots per covariate (n=83, p=4)
+  H dimensions: 83 x 37
+
+--- Running Poisson spatial additive sampler ---
+  Initializing via Poisson GLM...
+  GLM init: intercept=-72.133, sigma2=0.1000
+  GLM init: log_lam range=[2.32, 8.91]
+  Initial loglik: 205712.9
+  iter 500/15000  rho=0.0663  sig2=0.0445  ll=205734.8  acc(eta=0.87,b=0.63,rho=0.45)
+  iter 1000/15000  rho=0.0407  sig2=0.0396  ll=205746.3  acc(eta=0.87,b=0.59,rho=0.51)
+  iter 1500/15000  rho=0.0844  sig2=0.0794  ll=205740.5  acc(eta=0.87,b=0.59,rho=0.50)
+  iter 2000/15000  rho=0.0775  sig2=0.0751  ll=205740.9  acc(eta=0.87,b=0.58,rho=0.52)
+  iter 2500/15000  rho=0.0507  sig2=0.0701  ll=205741.9  acc(eta=0.87,b=0.58,rho=0.53)
+  iter 3000/15000  rho=0.0906  sig2=0.0977  ll=205739.5  acc(eta=0.87,b=0.59,rho=0.52)
+  iter 3500/15000  rho=0.0681  sig2=0.0634  ll=205732.4  acc(eta=0.87,b=0.60,rho=0.50)
+  iter 4000/15000  rho=0.0555  sig2=0.0499  ll=205739.7  acc(eta=0.87,b=0.60,rho=0.50)
+  iter 4500/15000  rho=0.0584  sig2=0.0717  ll=205744.4  acc(eta=0.87,b=0.60,rho=0.49)
+  iter 5000/15000  rho=0.0545  sig2=0.0478  ll=205719.9  acc(eta=0.87,b=0.59,rho=0.49)
+  iter 5500/15000  rho=0.0832  sig2=0.0621  ll=205730.9  acc(eta=0.87,b=0.59,rho=0.50)
+  iter 6000/15000  rho=0.0743  sig2=0.0679  ll=205744.3  acc(eta=0.87,b=0.60,rho=0.49)
+  iter 6500/15000  rho=0.0976  sig2=0.1049  ll=205741.2  acc(eta=0.87,b=0.60,rho=0.48)
+  iter 7000/15000  rho=0.0490  sig2=0.0369  ll=205743.9  acc(eta=0.87,b=0.60,rho=0.48)
+  iter 7500/15000  rho=0.0411  sig2=0.0394  ll=205735.1  acc(eta=0.87,b=0.60,rho=0.49)
+  iter 8000/15000  rho=0.0795  sig2=0.0620  ll=205740.5  acc(eta=0.87,b=0.60,rho=0.49)
+  iter 8500/15000  rho=0.0796  sig2=0.0671  ll=205741.5  acc(eta=0.87,b=0.60,rho=0.49)
+  iter 9000/15000  rho=0.0505  sig2=0.0395  ll=205744.0  acc(eta=0.87,b=0.60,rho=0.49)
+  iter 9500/15000  rho=0.0531  sig2=0.0358  ll=205734.4  acc(eta=0.87,b=0.60,rho=0.48)
+  iter 10000/15000  rho=0.0765  sig2=0.0470  ll=205729.2  acc(eta=0.87,b=0.60,rho=0.48)
+  iter 10500/15000  rho=0.0543  sig2=0.0364  ll=205741.3  acc(eta=0.87,b=0.60,rho=0.48)
+  iter 11000/15000  rho=0.0751  sig2=0.0669  ll=205737.4  acc(eta=0.87,b=0.60,rho=0.48)
+  iter 11500/15000  rho=0.0603  sig2=0.0545  ll=205737.5  acc(eta=0.87,b=0.60,rho=0.48)
+  iter 12000/15000  rho=0.0813  sig2=0.0498  ll=205738.2  acc(eta=0.87,b=0.61,rho=0.48)
+  iter 12500/15000  rho=0.0511  sig2=0.0369  ll=205737.9  acc(eta=0.87,b=0.61,rho=0.48)
+  iter 13000/15000  rho=0.1193  sig2=0.0842  ll=205724.8  acc(eta=0.87,b=0.61,rho=0.47)
+  iter 13500/15000  rho=0.1365  sig2=0.1069  ll=205723.1  acc(eta=0.87,b=0.61,rho=0.47)
+  iter 14000/15000  rho=0.0713  sig2=0.0607  ll=205739.3  acc(eta=0.87,b=0.61,rho=0.47)
+  iter 14500/15000  rho=0.0807  sig2=0.0577  ll=205738.7  acc(eta=0.87,b=0.61,rho=0.47)
+  iter 15000/15000  rho=0.1238  sig2=0.0684  ll=205727.0  acc(eta=0.87,b=0.61,rho=0.47)
+  MH acceptance: eta=0.868  b=0.614  rho=0.469
+  Elapsed: 60.8 seconds (1.0 minutes)
+
+--- Posterior summaries ---
+  sigma2: mean=0.0669  median=0.0587  95%CI=[0.0318, 0.1474]
+  rho:    mean=0.0739  median=0.0685  95%CI=[0.0302, 0.1407]
+
+  Smoothing variances (tau2_s):
+    poverty                  : 0.0083
+    pct_65plus               : 0.0049
+    median_income            : 0.0089
+    pct_nonwhite             : 0.0076
+
+  Acceptance rates: eta=0.868  b=0.614  rho=0.469
+null device 
+          1 
+  Saved: michigan_lung/traces.pdf
+  Saved: michigan_lung/marginal_effects.pdf
+null device 
+          1 
+  Saved: michigan_lung/spatial_effect.pdf
+null device 
+          1 
+  Saved: michigan_lung/fitted_vs_observed.pdf
+
+
+#########################################
+# Michigan Lung Cancer — Model Summary
+#########################################
+
+  Counties: 83
+  Covariates: 4 (poverty, pct_65plus, median_income, pct_nonwhite)
+  Knots per covariate: 10
+  MCMC: 15000 iterations, 5000 burn-in
+  Elapsed: 1.0 minutes
+
+  sigma2 (spatial): 0.0669 [0.0318, 0.1474]
+  rho (range):      0.0739 [0.0302, 0.1407]
+  Intercept:        0.0548 [-0.2165, 0.2890]
+
+  Deviance: -2*loglik = 610.3
+  Pearson X2 = 23.2  (df ~ 45)
+
+=== Done ===
